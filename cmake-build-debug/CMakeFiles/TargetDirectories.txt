@@ -1,0 +1,3 @@
+C:/Users/tirzi/Desktop/ProiectPOO/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/tirzi/Desktop/ProiectPOO/cmake-build-debug/CMakeFiles/ProiectPOO.dir
+C:/Users/tirzi/Desktop/ProiectPOO/cmake-build-debug/CMakeFiles/edit_cache.dir
