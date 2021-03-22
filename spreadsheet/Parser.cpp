@@ -2,7 +2,7 @@
 #include "../common/HFiles/Expression.h"
 #include "HFiles/Number.h"
 #include "HFiles/CellRef.h"
-#include "BinaryOp.cpp"
+#include "HFiles/BinaryOp.h"
 #include <stack>
 #include <string>
 #include <vector>
@@ -13,19 +13,25 @@ using namespace std;
 class Parser
 {
 public:
-    static Expression parse(const string &input)
+    static Expression *parse(const string &input)
     {
         vector<Token> ls = tokenize(input);
-        stack<Expression> operandSt;
+        stack<Expression *> operandSt;
         stack<Kind> operatorSt;
         for (const Token &token : ls)
         {
             if (token.kind == RANGLE || token.kind == LANGLE)
                 throw invalid_argument("WRONG Token");
             if (token.kind == NUMBER)
-                operandSt.push(Number(token.numberValue));
+            {
+                Number nr = Number(token.numberValue);
+                operandSt.push(&nr);
+            }
             else if (token.kind == CELL_LOCATION)
-                operandSt.push(CellRef(token.cellLocationValue.value()));
+            {
+                CellRef cellRef = CellRef(token.cellLocationValue.value());
+                operandSt.push(&cellRef);
+            }
             else
             {
                 if (!operatorSt.empty())
@@ -33,11 +39,12 @@ public:
                     Kind topOperator = operatorSt.top();
                     while (hasHigherPriority(topOperator, token.kind))
                     {
-                        Expression exp1 = operandSt.top();
+                        Expression *exp1 = operandSt.top();
                         operandSt.pop();
-                        Expression exp2 = operandSt.top();
+                        Expression *exp2 = operandSt.top();
                         operandSt.pop();
-                        operandSt.push(BinaryOp(exp2, exp1, topOperator));
+                        BinaryOp binOP = BinaryOp(exp2, exp1, topOperator);
+                        operandSt.push(&binOP);
 
                         operatorSt.pop();
                         if (operatorSt.empty())
@@ -50,14 +57,15 @@ public:
         }
         while (!operatorSt.empty())
         {
-            Expression exp1 = operandSt.top();
+            Expression *exp1 = operandSt.top();
             operandSt.pop();
-            Expression exp2 = operandSt.top();
+            Expression *exp2 = operandSt.top();
             operandSt.pop();
 
             Kind topOperator = operatorSt.top();
             operatorSt.pop();
-            operandSt.push(BinaryOp(exp2, exp1, topOperator));
+            BinaryOp binOP = BinaryOp(exp2, exp1, topOperator);
+            operandSt.push(&binOP);
         }
         return operandSt.top();
     }

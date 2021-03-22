@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../../common/HFiles/Expression.h"
 #include "Spreadsheet.h"
 #include <set>
 
@@ -12,16 +11,11 @@ private:
     double value;
 
 public:
-    explicit Number(double value);
+    Number(double value);
 
-    [[nodiscard]] shared_ptr<Expression> clone() const override
-    {
-        return make_shared<Number>(*this);
-    }
+    double evaluate(Spreadsheet &context);
 
-    double evaluate(Spreadsheet &context) override;
-
-    void findCellReferences(set<CellLocation> dependencies) override;
+    void findCellReferences(set<CellLocation> dependencies);
 
     friend ostream &operator<<(std::ostream &strm, const Number &number);
 };

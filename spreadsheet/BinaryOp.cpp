@@ -1,12 +1,5 @@
 #include "HFiles/BinaryOp.h"
 
-BinaryOp::BinaryOp(const Expression &leftOperand, const Expression &rightOperand, Kind op)
-{
-    this->leftOperand = leftOperand.clone();
-    this->rightOperand = rightOperand.clone();
-    this->op = op;
-}
-
 double BinaryOp::evaluate(Spreadsheet &context)
 {
     double expr1 = leftOperand->evaluate(context);

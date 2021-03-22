@@ -10,7 +10,7 @@ private:
     Spreadsheet spreadsheet;
     CellLocation location;
     double value;
-    optional<shared_ptr<Expression>> expr;
+    optional<Expression*> expr;
     set<CellLocation> dependents;
 
 public:
@@ -53,7 +53,7 @@ private:
         if (expr.has_value())
         {
             set<CellLocation> dependencies;
-            expr.value().findCellReferences(dependencies);
+            expr.value()->findCellReferences(dependencies);
             for (CellLocation dependency : dependencies)
                 spreadsheet.removeDependency(location, dependency);
         }
@@ -64,7 +64,7 @@ private:
         if (expr.has_value())
         {
             set<CellLocation> dependencies;
-            expr.value().findCellReferences(dependencies);
+            expr.value()->findCellReferences(dependencies);
             for (CellLocation dependency : dependencies)
                 spreadsheet.addDependency(location, dependency);
         }
@@ -94,7 +94,7 @@ public:
         if (expr.has_value())
         {
             set<CellLocation> dependencies;
-            expr.value().findCellReferences(dependencies);
+            expr.value()->findCellReferences(dependencies);
             for (auto i : dependencies)
                 target.insert(i);
         }
@@ -105,7 +105,7 @@ public:
         if (!expr.has_value())
             value = 0.0;
         else
-            value = expr.value().evaluate(spreadsheet);
+            value = expr.value()->evaluate(spreadsheet);
         for (CellLocation dependent : dependents)
             spreadsheet.recalculate(dependent);
     }

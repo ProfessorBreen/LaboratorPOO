@@ -1,27 +1,28 @@
 #pragma once
-#include "../../common/HFiles/Expression.h"
+
 #include <cmath>
 #include <set>
-#include <memory>
+#include <variant>
+#include "Spreadsheet.h"
 
 using namespace std;
 
 class BinaryOp : public Expression
 {
 private:
-    shared_ptr<Expression> leftOperand;
-    shared_ptr<Expression> rightOperand;
+    Expression *leftOperand;
+    Expression *rightOperand;
     Kind op;
 
 public:
-    BinaryOp(const Expression &leftOperand, const Expression &rightOperand, Kind op);
-
-    [[nodiscard]] shared_ptr<Expression> clone() const override
+    BinaryOp(Expression *leftOperand, Expression *rightOperand, Kind op)
     {
-        return make_shared<BinaryOp>(*this);
+        this->leftOperand = leftOperand;
+        this->rightOperand = rightOperand;
+        this->op = op;
     }
 
-    virtual double evaluate(Spreadsheet &context) override;
+    double evaluate(Spreadsheet &context);
 
     void findCellReferences(set<CellLocation> dependencies) override;
 

@@ -9,9 +9,7 @@ using namespace std;
 class Expression
 {
 public:
-    shared_ptr<Expression> clone() const;
+    virtual double evaluate(Spreadsheet &context) = 0;
 
-    virtual double evaluate(Spreadsheet &context) =0;
-
-    void findCellReferences(set<CellLocation> dependencies);
+    virtual void findCellReferences(set<CellLocation> dependencies) = 0;
 };

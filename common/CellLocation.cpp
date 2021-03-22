@@ -1,4 +1,4 @@
-#include "HFiles/CellLocation.h"
+#include "CellLocation.h"
 
 CellLocation::CellLocation(const string &input)
 {

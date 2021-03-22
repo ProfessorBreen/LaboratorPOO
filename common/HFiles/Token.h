@@ -1,6 +1,6 @@
 #pragma once
 
-#include "CellLocation.h"
+#include "../CellLocation.h"
 #include <optional>
 #include <cassert>
 #include <vector>
