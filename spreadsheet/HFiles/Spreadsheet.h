@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Cell.cpp"
+#include "../Cell.h"
 #include <map>
 #include <utility>
 
@@ -15,12 +15,7 @@ public:
     Spreadsheet()
     = default;
 
-    double evaluateExpression(const string &expression)
-    {
-        Expression *expr = Parser::parse(expression);
-        visited.clear();
-        return expr->evaluate(*this);
-    }
+    double evaluateExpression(const string &expression);
 
     void setCellExpression(const CellLocation &location, const string &input);
 

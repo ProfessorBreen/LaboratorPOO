@@ -83,7 +83,7 @@
 		<Unit filename="C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/CellLocation.cpp">
 			<Option target="ProiectPOO"/>
 		</Unit>
-		<Unit filename="C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/CellLocation.h">
+		<Unit filename="C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/CellLocation.h">
 			<Option target="ProiectPOO"/>
 		</Unit>
 		<Unit filename="C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/Expression.h">
@@ -102,6 +102,9 @@
 			<Option target="ProiectPOO"/>
 		</Unit>
 		<Unit filename="C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/Cell.cpp">
+			<Option target="ProiectPOO"/>
+		</Unit>
+		<Unit filename="C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/Cell.h">
 			<Option target="ProiectPOO"/>
 		</Unit>
 		<Unit filename="C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/CellRef.cpp">
@@ -123,6 +126,9 @@
 			<Option target="ProiectPOO"/>
 		</Unit>
 		<Unit filename="C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/Parser.cpp">
+			<Option target="ProiectPOO"/>
+		</Unit>
+		<Unit filename="C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/Parser.h">
 			<Option target="ProiectPOO"/>
 		</Unit>
 		<Unit filename="C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/Spreadsheet.cpp">

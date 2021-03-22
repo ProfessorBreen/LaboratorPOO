@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../spreadsheet/HFiles/Spreadsheet.h"
+#include "CellLocation.h"
 #include <set>
 #include <memory>
 
 using namespace std;
 
-class Expression
-{
+class Spreadsheet;
+
+class Expression{
 public:
     virtual double evaluate(Spreadsheet &context) = 0;
 

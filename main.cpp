@@ -1,5 +1,6 @@
 #include <iostream>
-#include "spreadsheet/Spreadsheet.cpp"
+#include <vector>
+#include "spreadsheet/HFiles/Spreadsheet.h"
 
 using namespace std;
 vector<string> res;

@@ -1,5 +1,5 @@
 #include "HFiles/CellRef.h"
-
+#include "HFiles/Spreadsheet.h"
 CellRef::CellRef(CellLocation cl) : cl(std::move(cl))
 {
 }

@@ -1,4 +1,4 @@
-#include "CellLocation.h"
+#include "HFiles/CellLocation.h"
 
 CellLocation::CellLocation(const string &input)
 {
@@ -38,4 +38,9 @@ ostream &operator<<(ostream &strm, const CellLocation &cellLocation)
 {
     strm << cellLocation.representation;
     return strm;
+}
+
+bool CellLocation::operator<(const CellLocation &b) const
+{
+    return representation<b.representation;
 }

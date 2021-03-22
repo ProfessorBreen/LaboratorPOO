@@ -1,5 +1,5 @@
 #include "HFiles/Spreadsheet.h"
-
+#include "Parser.h"
 #include <utility>
 
 void Spreadsheet::findCellReferences(CellLocation subject, set<CellLocation> target)
@@ -9,7 +9,7 @@ void Spreadsheet::findCellReferences(CellLocation subject, set<CellLocation> tar
 
 void Spreadsheet::recalculate(CellLocation location)
 {
-    getOrCreate(location).recalculate(spreadsheet);
+    getOrCreate(location).recalculate(*this);
 }
 
 void Spreadsheet::removeDependency(CellLocation dependent, CellLocation dependency)
@@ -98,4 +98,11 @@ Cell Spreadsheet::getOrCreate(CellLocation cellLocation)
     Cell newCell = Cell(CellLocation("a1"));
     spreadsheet[cellLocation] = newCell;
     return newCell;
+}
+
+double Spreadsheet::evaluateExpression(const string &expression)
+{
+    Expression *expr = Parser::parse(expression);
+    visited.clear();
+    return expr->evaluate(*this);
 }
