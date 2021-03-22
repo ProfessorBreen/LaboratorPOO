@@ -304,33 +304,6 @@ spreadsheet/CellRef.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.s
 .PHONY : spreadsheet/CellRef.cpp.s
 
-spreadsheet/CycleDetector.obj: spreadsheet/CycleDetector.cpp.obj
-
-.PHONY : spreadsheet/CycleDetector.obj
-
-# target to build an object file
-spreadsheet/CycleDetector.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.obj
-.PHONY : spreadsheet/CycleDetector.cpp.obj
-
-spreadsheet/CycleDetector.i: spreadsheet/CycleDetector.cpp.i
-
-.PHONY : spreadsheet/CycleDetector.i
-
-# target to preprocess a source file
-spreadsheet/CycleDetector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.i
-.PHONY : spreadsheet/CycleDetector.cpp.i
-
-spreadsheet/CycleDetector.s: spreadsheet/CycleDetector.cpp.s
-
-.PHONY : spreadsheet/CycleDetector.s
-
-# target to generate assembly for a file
-spreadsheet/CycleDetector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.s
-.PHONY : spreadsheet/CycleDetector.cpp.s
-
 spreadsheet/Number.obj: spreadsheet/Number.cpp.obj
 
 .PHONY : spreadsheet/Number.obj
@@ -439,9 +412,6 @@ help:
 	@echo ... spreadsheet/CellRef.obj
 	@echo ... spreadsheet/CellRef.i
 	@echo ... spreadsheet/CellRef.s
-	@echo ... spreadsheet/CycleDetector.obj
-	@echo ... spreadsheet/CycleDetector.i
-	@echo ... spreadsheet/CycleDetector.s
 	@echo ... spreadsheet/Number.obj
 	@echo ... spreadsheet/Number.i
 	@echo ... spreadsheet/Number.s

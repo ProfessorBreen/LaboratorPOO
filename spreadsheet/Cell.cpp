@@ -7,25 +7,28 @@ using namespace std;
 class Cell
 {
 private:
-    Spreadsheet spreadsheet;
     CellLocation location;
     double value;
-    optional<Expression*> expr;
+    optional<Expression *> expr;
     set<CellLocation> dependents;
 
 public:
-    Cell(Spreadsheet spreadsheet, CellLocation location)
+    Cell(CellLocation location)
     {
         value = 0;
         expr = nullopt;
         dependents.clear();
-        this->spreadsheet = move(spreadsheet);
         this->location = location;
     }
 
     double getValue()
     {
         return value;
+    }
+
+    void setValue(double value)
+    {
+        this->value = value;
     }
 
     string getExpression()
@@ -35,20 +38,32 @@ public:
         return "";
     }
 
-    void setExpression(string input)
+    Expression *getPureExpression()
     {
-        removeDependencies();
+        if (expr.has_value())
+            return expr.value();
+        return NULL;
+    }
+
+    set<CellLocation> getDependents()
+    {
+        return dependents;
+    }
+
+    void setExpression(Spreadsheet spreadsheet, string input)
+    {
+        removeDependencies(spreadsheet);
         if (input.empty())
             expr = nullopt;
         else
         {
             expr = Parser::parse(input);
-            addDependencies();
+            addDependencies(spreadsheet);
         }
     }
 
 private:
-    void removeDependencies()
+    void removeDependencies(Spreadsheet spreadsheet)
     {
         if (expr.has_value())
         {
@@ -59,7 +74,7 @@ private:
         }
     }
 
-    void addDependencies()
+    void addDependencies(Spreadsheet spreadsheet)
     {
         if (expr.has_value())
         {
@@ -100,7 +115,7 @@ public:
         }
     }
 
-    void recalculate()
+    void recalculate(Spreadsheet spreadsheet)
     {
         if (!expr.has_value())
             value = 0.0;

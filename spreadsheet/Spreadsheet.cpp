@@ -9,7 +9,7 @@ void Spreadsheet::findCellReferences(CellLocation subject, set<CellLocation> tar
 
 void Spreadsheet::recalculate(CellLocation location)
 {
-    getOrCreate(std::move(location)).recalculate();
+    getOrCreate(location).recalculate(spreadsheet);
 }
 
 void Spreadsheet::removeDependency(CellLocation dependent, CellLocation dependency)
@@ -69,25 +69,25 @@ void Spreadsheet::setCellExpression(const CellLocation &location, const string &
     if (spreadsheet.find(location) != spreadsheet.end())
     {
         Cell curCell = spreadsheet[location];
-        curCell.setExpression(input);
+        curCell.setExpression(*this, input);
 
         if (hasCycleFrom(location))
-            curCell.setExpression("0.0");
+            curCell.setExpression(*this, "0.0");
 
         recalculate(location);
         spreadsheet[location] = curCell;
     }
     else
     {
-        Cell newCell = Cell(*this, location);
-        spreadsheet[location] = static_cast<Cell &&>(newCell);
-        newCell.setExpression(input);
+        Cell newCell = Cell(location);
+        spreadsheet[location] = newCell;
+        newCell.setExpression(*this, input);
 
         if (hasCycleFrom(location))
-            newCell.setExpression("0.0");
+            newCell.setExpression(*this, "0.0");
 
         recalculate(location);
-        spreadsheet[location] = static_cast<Cell &&>(newCell);
+        spreadsheet[location] = newCell;
     }
 }
 
@@ -95,7 +95,7 @@ Cell Spreadsheet::getOrCreate(CellLocation cellLocation)
 {
     if (spreadsheet.find(cellLocation) != spreadsheet.end())
         return spreadsheet[cellLocation];
-    Cell newCell = Cell(*this, CellLocation("a1"));
-    spreadsheet[cellLocation] = static_cast<Cell &&>(newCell);
+    Cell newCell = Cell(CellLocation("a1"));
+    spreadsheet[cellLocation] = newCell;
     return newCell;
 }

@@ -5,7 +5,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj"
   "CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj"
   "CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj"
-  "CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.obj"
   "CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.obj"
   "CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj"
   "CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj"

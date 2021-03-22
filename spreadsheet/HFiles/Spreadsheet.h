@@ -2,10 +2,9 @@
 
 #include "../Cell.cpp"
 #include <map>
+#include <utility>
 
 using namespace std;
-
-class Cell;
 
 class Spreadsheet
 {
