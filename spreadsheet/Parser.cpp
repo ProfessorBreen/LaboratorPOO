@@ -1,7 +1,7 @@
-#include "../common/lexer/Token.cpp"
-#include "../common/api/Expression.cpp"
-#include "Number.cpp"
-#include "CellRef.cpp"
+#include "../common/HFiles/Token.h"
+#include "../common/HFiles/Expression.h"
+#include "HFiles/Number.h"
+#include "HFiles/CellRef.h"
 #include "BinaryOp.cpp"
 #include <stack>
 #include <string>
@@ -13,7 +13,7 @@ using namespace std;
 class Parser
 {
 public:
-    static Expression parse(const string& input)
+    static Expression parse(const string &input)
     {
         vector<Token> ls = tokenize(input);
         stack<Expression> operandSt;
@@ -68,4 +68,6 @@ public:
             return other == PLUS || other == MINUS;
         return other != CARET;
     }
+
+
 };

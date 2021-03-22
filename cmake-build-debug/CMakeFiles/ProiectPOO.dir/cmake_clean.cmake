@@ -1,9 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.obj"
-  "CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.obj"
-  "CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.obj"
-  "CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.obj"
-  "CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.obj"
+  "CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.obj"
+  "CMakeFiles/ProiectPOO.dir/common/Token.cpp.obj"
   "CMakeFiles/ProiectPOO.dir/main.cpp.obj"
   "CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj"
   "CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj"

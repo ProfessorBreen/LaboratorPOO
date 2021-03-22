@@ -3,4 +3,4 @@ project(ProiectPOO)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(ProiectPOO main.cpp common/api/CellLocation.cpp common/api/EvaluationContext.cpp common/api/Expression.cpp common/api/BasicSpreadsheet.cpp common/lexer/Token.cpp spreadsheet/BinaryOp.cpp spreadsheet/Number.cpp spreadsheet/CellRef.cpp spreadsheet/Parser.cpp spreadsheet/Cell.cpp spreadsheet/Spreadsheet.cpp spreadsheet/CycleDetector.cpp)
+add_executable(ProiectPOO main.cpp common/HFiles/CellLocation.h spreadsheet/HFiles/Spreadsheet.h common/HFiles/Expression.h common/HFiles/Token.h spreadsheet/BinaryOp.cpp spreadsheet/HFiles/Number.h spreadsheet/HFiles/CellRef.h spreadsheet/Parser.cpp spreadsheet/Cell.cpp spreadsheet/HFiles/CycleDetector.h common/CellLocation.cpp common/Token.cpp spreadsheet/HFiles/BinaryOp.h spreadsheet/CellRef.cpp spreadsheet/Number.cpp spreadsheet/CycleDetector.cpp spreadsheet/Spreadsheet.cpp)

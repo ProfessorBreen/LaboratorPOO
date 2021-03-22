@@ -1,34 +1,21 @@
-#include "../common/api/Expression.cpp"
-#include "../common/lexer/Token.cpp"
-#include <cmath>
-#include <set>
+#include "HFiles/Number.h"
 
-using namespace std;
-
-class Number : public Expression
+Number::Number(double value)
 {
-private:
-    double value;
+    this->value = value;
+}
 
-public:
-    explicit Number(double value)
-    {
-        this->value = value;
-    }
+double Number::evaluate(Spreadsheet &context)
+{
+    return value;
+}
 
-    double evaluate(EvaluationContext context) override
-    {
-        return value;
-    }
+ostream &operator<<(std::ostream &strm, const Number &number)
+{
+    strm << to_string(number.value);
+    return strm;
+}
 
-    void findCellReferences(set<CellLocation> dependencies) override
-    {
-    }
-
-    friend ostream &operator<<(std::ostream &strm, const Number &number)
-    {
-        strm << to_string(number.value);
-        return strm;
-    }
-};
-
+void Number::findCellReferences(set<CellLocation> dependencies)
+{
+}

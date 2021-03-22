@@ -1,21 +1,20 @@
 #include <utility>
 
 #include "Parser.cpp"
-#include "../common/api/BasicSpreadsheet.cpp"
 
 using namespace std;
 
 class Cell
 {
 private:
-    BasicSpreadsheet spreadsheet;
+    Spreadsheet spreadsheet;
     CellLocation location;
     double value;
-    optional<Expression> expr;
+    optional<shared_ptr<Expression>> expr;
     set<CellLocation> dependents;
 
 public:
-    Cell(BasicSpreadsheet spreadsheet, CellLocation location) : location(location)
+    Cell(Spreadsheet spreadsheet, CellLocation location)
     {
         value = 0;
         expr = nullopt;
@@ -24,7 +23,6 @@ public:
         this->location = location;
     }
 
-public:
     double getValue()
     {
         return value;
@@ -33,8 +31,8 @@ public:
     string getExpression()
     {
         if (expr.has_value())
-            return "";
-        return expr.value();
+            return reinterpret_cast<basic_string<char, char_traits<char>, allocator<char>> &&>(expr.value());
+        return "";
     }
 
     void setExpression(string input)

@@ -62,10 +62,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\tirzi\Desktop\ProiectPOO
+CMAKE_SOURCE_DIR = "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ProiectPOO.dir/depend.make
@@ -78,210 +78,165 @@ include CMakeFiles/ProiectPOO.dir/flags.make
 
 CMakeFiles/ProiectPOO.dir/main.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
 CMakeFiles/ProiectPOO.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProiectPOO.dir/main.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\main.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProiectPOO.dir/main.cpp.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\main.cpp.obj -c "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\main.cpp"
 
 CMakeFiles/ProiectPOO.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/main.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\main.cpp > CMakeFiles\ProiectPOO.dir\main.cpp.i
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\main.cpp" > CMakeFiles\ProiectPOO.dir\main.cpp.i
 
 CMakeFiles/ProiectPOO.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/main.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\main.cpp -o CMakeFiles\ProiectPOO.dir\main.cpp.s
-
-CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
-CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.obj: ../common/api/CellLocation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\common\api\CellLocation.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\common\api\CellLocation.cpp
-
-CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\common\api\CellLocation.cpp > CMakeFiles\ProiectPOO.dir\common\api\CellLocation.cpp.i
-
-CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\common\api\CellLocation.cpp -o CMakeFiles\ProiectPOO.dir\common\api\CellLocation.cpp.s
-
-CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
-CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.obj: ../common/api/EvaluationContext.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\common\api\EvaluationContext.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\common\api\EvaluationContext.cpp
-
-CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\common\api\EvaluationContext.cpp > CMakeFiles\ProiectPOO.dir\common\api\EvaluationContext.cpp.i
-
-CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\common\api\EvaluationContext.cpp -o CMakeFiles\ProiectPOO.dir\common\api\EvaluationContext.cpp.s
-
-CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
-CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.obj: ../common/api/Expression.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\common\api\Expression.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\common\api\Expression.cpp
-
-CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\common\api\Expression.cpp > CMakeFiles\ProiectPOO.dir\common\api\Expression.cpp.i
-
-CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\common\api\Expression.cpp -o CMakeFiles\ProiectPOO.dir\common\api\Expression.cpp.s
-
-CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
-CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.obj: ../common/api/BasicSpreadsheet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\common\api\BasicSpreadsheet.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\common\api\BasicSpreadsheet.cpp
-
-CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\common\api\BasicSpreadsheet.cpp > CMakeFiles\ProiectPOO.dir\common\api\BasicSpreadsheet.cpp.i
-
-CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\common\api\BasicSpreadsheet.cpp -o CMakeFiles\ProiectPOO.dir\common\api\BasicSpreadsheet.cpp.s
-
-CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
-CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.obj: ../common/lexer/Token.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\common\lexer\Token.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\common\lexer\Token.cpp
-
-CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\common\lexer\Token.cpp > CMakeFiles\ProiectPOO.dir\common\lexer\Token.cpp.i
-
-CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\common\lexer\Token.cpp -o CMakeFiles\ProiectPOO.dir\common\lexer\Token.cpp.s
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\main.cpp" -o CMakeFiles\ProiectPOO.dir\main.cpp.s
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
 CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj: ../spreadsheet/BinaryOp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\BinaryOp.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\BinaryOp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\BinaryOp.cpp.obj -c "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\BinaryOp.cpp"
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\BinaryOp.cpp > CMakeFiles\ProiectPOO.dir\spreadsheet\BinaryOp.cpp.i
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\BinaryOp.cpp" > CMakeFiles\ProiectPOO.dir\spreadsheet\BinaryOp.cpp.i
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\BinaryOp.cpp -o CMakeFiles\ProiectPOO.dir\spreadsheet\BinaryOp.cpp.s
-
-CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
-CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.obj: ../spreadsheet/Number.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\Number.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\Number.cpp
-
-CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\Number.cpp > CMakeFiles\ProiectPOO.dir\spreadsheet\Number.cpp.i
-
-CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\Number.cpp -o CMakeFiles\ProiectPOO.dir\spreadsheet\Number.cpp.s
-
-CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
-CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj: ../spreadsheet/CellRef.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\CellRef.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\CellRef.cpp
-
-CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\CellRef.cpp > CMakeFiles\ProiectPOO.dir\spreadsheet\CellRef.cpp.i
-
-CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\CellRef.cpp -o CMakeFiles\ProiectPOO.dir\spreadsheet\CellRef.cpp.s
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\BinaryOp.cpp" -o CMakeFiles\ProiectPOO.dir\spreadsheet\BinaryOp.cpp.s
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
 CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj: ../spreadsheet/Parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\Parser.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\Parser.cpp.obj -c "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\Parser.cpp"
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\Parser.cpp > CMakeFiles\ProiectPOO.dir\spreadsheet\Parser.cpp.i
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\Parser.cpp" > CMakeFiles\ProiectPOO.dir\spreadsheet\Parser.cpp.i
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\Parser.cpp -o CMakeFiles\ProiectPOO.dir\spreadsheet\Parser.cpp.s
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\Parser.cpp" -o CMakeFiles\ProiectPOO.dir\spreadsheet\Parser.cpp.s
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
 CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../spreadsheet/Cell.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\Cell.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\Cell.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\Cell.cpp.obj -c "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\Cell.cpp"
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\Cell.cpp > CMakeFiles\ProiectPOO.dir\spreadsheet\Cell.cpp.i
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\Cell.cpp" > CMakeFiles\ProiectPOO.dir\spreadsheet\Cell.cpp.i
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\Cell.cpp -o CMakeFiles\ProiectPOO.dir\spreadsheet\Cell.cpp.s
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\Cell.cpp" -o CMakeFiles\ProiectPOO.dir\spreadsheet\Cell.cpp.s
 
-CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
-CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../spreadsheet/Spreadsheet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\Spreadsheet.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\Spreadsheet.cpp
+CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
+CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.obj: ../common/CellLocation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\common\CellLocation.cpp.obj -c "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\common\CellLocation.cpp"
 
-CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\Spreadsheet.cpp > CMakeFiles\ProiectPOO.dir\spreadsheet\Spreadsheet.cpp.i
+CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.i"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\common\CellLocation.cpp" > CMakeFiles\ProiectPOO.dir\common\CellLocation.cpp.i
 
-CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\Spreadsheet.cpp -o CMakeFiles\ProiectPOO.dir\spreadsheet\Spreadsheet.cpp.s
+CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.s"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\common\CellLocation.cpp" -o CMakeFiles\ProiectPOO.dir\common\CellLocation.cpp.s
+
+CMakeFiles/ProiectPOO.dir/common/Token.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
+CMakeFiles/ProiectPOO.dir/common/Token.cpp.obj: ../common/Token.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ProiectPOO.dir/common/Token.cpp.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\common\Token.cpp.obj -c "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\common\Token.cpp"
+
+CMakeFiles/ProiectPOO.dir/common/Token.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/common/Token.cpp.i"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\common\Token.cpp" > CMakeFiles\ProiectPOO.dir\common\Token.cpp.i
+
+CMakeFiles/ProiectPOO.dir/common/Token.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/common/Token.cpp.s"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\common\Token.cpp" -o CMakeFiles\ProiectPOO.dir\common\Token.cpp.s
+
+CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
+CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj: ../spreadsheet/CellRef.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\CellRef.cpp.obj -c "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\CellRef.cpp"
+
+CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.i"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\CellRef.cpp" > CMakeFiles\ProiectPOO.dir\spreadsheet\CellRef.cpp.i
+
+CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.s"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\CellRef.cpp" -o CMakeFiles\ProiectPOO.dir\spreadsheet\CellRef.cpp.s
+
+CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
+CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.obj: ../spreadsheet/Number.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\Number.cpp.obj -c "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\Number.cpp"
+
+CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.i"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\Number.cpp" > CMakeFiles\ProiectPOO.dir\spreadsheet\Number.cpp.i
+
+CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.s"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\Number.cpp" -o CMakeFiles\ProiectPOO.dir\spreadsheet\Number.cpp.s
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
 CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.obj: ../spreadsheet/CycleDetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.obj"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\CycleDetector.cpp.obj -c C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\CycleDetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\CycleDetector.cpp.obj -c "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\CycleDetector.cpp"
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.i"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\CycleDetector.cpp > CMakeFiles\ProiectPOO.dir\spreadsheet\CycleDetector.cpp.i
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\CycleDetector.cpp" > CMakeFiles\ProiectPOO.dir\spreadsheet\CycleDetector.cpp.i
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.s"
-	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tirzi\Desktop\ProiectPOO\spreadsheet\CycleDetector.cpp -o CMakeFiles\ProiectPOO.dir\spreadsheet\CycleDetector.cpp.s
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\CycleDetector.cpp" -o CMakeFiles\ProiectPOO.dir\spreadsheet\CycleDetector.cpp.s
+
+CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: CMakeFiles/ProiectPOO.dir/flags.make
+CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../spreadsheet/Spreadsheet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ProiectPOO.dir\spreadsheet\Spreadsheet.cpp.obj -c "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\Spreadsheet.cpp"
+
+CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.i"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\Spreadsheet.cpp" > CMakeFiles\ProiectPOO.dir\spreadsheet\Spreadsheet.cpp.i
+
+CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.s"
+	C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\spreadsheet\Spreadsheet.cpp" -o CMakeFiles\ProiectPOO.dir\spreadsheet\Spreadsheet.cpp.s
 
 # Object files for target ProiectPOO
 ProiectPOO_OBJECTS = \
 "CMakeFiles/ProiectPOO.dir/main.cpp.obj" \
-"CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.obj" \
-"CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.obj" \
-"CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.obj" \
-"CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.obj" \
-"CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.obj" \
 "CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj" \
-"CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.obj" \
-"CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj" \
 "CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj" \
 "CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj" \
-"CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj" \
-"CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.obj"
+"CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.obj" \
+"CMakeFiles/ProiectPOO.dir/common/Token.cpp.obj" \
+"CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj" \
+"CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.obj" \
+"CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.obj" \
+"CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj"
 
 # External object files for target ProiectPOO
 ProiectPOO_EXTERNAL_OBJECTS =
 
 ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/main.cpp.obj
-ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.obj
-ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.obj
-ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.obj
-ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.obj
-ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.obj
 ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj
-ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.obj
-ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj
 ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj
 ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj
-ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj
+ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.obj
+ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/common/Token.cpp.obj
+ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj
+ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/spreadsheet/Number.cpp.obj
 ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/spreadsheet/CycleDetector.cpp.obj
+ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj
 ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/build.make
 ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/linklibs.rsp
 ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/objects1.rsp
 ProiectPOO.exe: CMakeFiles/ProiectPOO.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable ProiectPOO.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ProiectPOO.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ProiectPOO.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -294,6 +249,6 @@ CMakeFiles/ProiectPOO.dir/clean:
 .PHONY : CMakeFiles/ProiectPOO.dir/clean
 
 CMakeFiles/ProiectPOO.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\tirzi\Desktop\ProiectPOO C:\Users\tirzi\Desktop\ProiectPOO C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles\ProiectPOO.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO" "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO" "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug" "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug" "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles\ProiectPOO.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/ProiectPOO.dir/depend
 

@@ -1,29 +1,49 @@
-#include "../api/CellLocation.cpp"
-#include <optional>
-#include <cassert>
-#include <vector>
-#include <iostream>
+#include "HFiles/Token.h"
 
-using namespace std;
-
-enum Kind
+Token::Token(Kind kind)
 {
-    PLUS,
-    MINUS,
-    STAR,
-    SLASH,
-    CARET,
-    LPARENTHESIS,
-    RPARENTHESIS,
-    LANGLE,
-    RANGLE,
-    EQUALS,
-    NUMBER,
-    CELL_LOCATION
-};
+    this->kind = kind;
+    cellLocationValue = nullopt;
+    numberValue = 0;
+    assert(kind != NUMBER && kind != CELL_LOCATION);
+}
 
-static const char *enum_str[] = {"PLUS", "MINUS", "STAR", "SLASH", "CARET", "LPARENTHESIS", "RPARENTHESIS", "LANGLE",
-                                 "RANGLE", "EQUALS", "NUMBER", "CELL_LOCATION"};
+Token::Token(CellLocation cellLocation)
+{
+    this->kind = CELL_LOCATION;
+    cellLocationValue = cellLocation;
+    numberValue = 0;
+}
+
+Token::Token(double value)
+{
+    this->kind = NUMBER;
+    cellLocationValue = nullopt;
+    numberValue = value;
+}
+
+Token::Token(Kind kind, CellLocation cellLocationValue, double numberValue)
+{
+    this->kind = kind;
+    this->cellLocationValue = cellLocationValue;
+    this->numberValue = numberValue;
+}
+
+ostream &operator<<(ostream &strm, const Token &token)
+{
+    switch (token.kind)
+    {
+        case CELL_LOCATION:
+            strm << "CELL(" << token.cellLocationValue.value() << ")";
+            break;
+        case NUMBER:
+            strm << "NUMBER(" + to_string(token.numberValue) + ")";
+            break;
+        default:
+            strm << enum_str[token.kind];
+    }
+    return strm;
+}
 
 string kindToString(Kind kind)
 {
@@ -53,66 +73,6 @@ string kindToString(Kind kind)
             return "";
     }
 }
-
-class Token
-{
-public:
-    Kind kind;
-    optional<CellLocation> cellLocationValue;
-    double numberValue;
-
-    explicit Token(Kind kind)
-    {
-        this->kind = kind;
-        cellLocationValue = nullopt;
-        numberValue = 0;
-        assert(kind != NUMBER && kind != CELL_LOCATION);
-    }
-
-    explicit Token(double value)
-    {
-        this->kind = NUMBER;
-        cellLocationValue = nullopt;
-        numberValue = value;
-    }
-
-    explicit Token(CellLocation cellLocation)
-    {
-        this->kind = CELL_LOCATION;
-        cellLocationValue = cellLocation;
-        numberValue = 0;
-    }
-
-private:
-    Token(Kind kind, CellLocation cellLocationValue, double numberValue)
-    {
-        this->kind = kind;
-        this->cellLocationValue = cellLocationValue;
-        this->numberValue = numberValue;
-    }
-
-public:
-    friend ostream &operator<<(std::ostream &strm, const Token &token)
-    {
-        switch (token.kind)
-        {
-            case CELL_LOCATION:
-                strm << "CELL(" + token.cellLocationValue.value().getRepresentation() + ")";
-                break;
-            case NUMBER:
-                strm << "NUMBER(" + to_string(token.numberValue) + ")";
-                break;
-            default:
-                strm << enum_str[token.kind];
-        }
-        return strm;
-    }
-
-    bool operator==(const Token &token) const
-    {
-        return kind == token.kind && cellLocationValue == token.cellLocationValue && numberValue == token.numberValue;
-    }
-};
 
 vector<Token> tokenize(string input)
 {

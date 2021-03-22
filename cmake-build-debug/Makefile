@@ -67,10 +67,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\tirzi\Desktop\ProiectPOO
+CMAKE_SOURCE_DIR = "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tirzi\Desktop\ProiectPOO\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\tirzi\Desktop\UNIBUC\Materii\Semestrul 2\POO\LaboratorPOO\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -142,140 +142,59 @@ ProiectPOO/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/build
 .PHONY : ProiectPOO/fast
 
-common/api/BasicSpreadsheet.obj: common/api/BasicSpreadsheet.cpp.obj
+common/CellLocation.obj: common/CellLocation.cpp.obj
 
-.PHONY : common/api/BasicSpreadsheet.obj
-
-# target to build an object file
-common/api/BasicSpreadsheet.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.obj
-.PHONY : common/api/BasicSpreadsheet.cpp.obj
-
-common/api/BasicSpreadsheet.i: common/api/BasicSpreadsheet.cpp.i
-
-.PHONY : common/api/BasicSpreadsheet.i
-
-# target to preprocess a source file
-common/api/BasicSpreadsheet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.i
-.PHONY : common/api/BasicSpreadsheet.cpp.i
-
-common/api/BasicSpreadsheet.s: common/api/BasicSpreadsheet.cpp.s
-
-.PHONY : common/api/BasicSpreadsheet.s
-
-# target to generate assembly for a file
-common/api/BasicSpreadsheet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/api/BasicSpreadsheet.cpp.s
-.PHONY : common/api/BasicSpreadsheet.cpp.s
-
-common/api/CellLocation.obj: common/api/CellLocation.cpp.obj
-
-.PHONY : common/api/CellLocation.obj
+.PHONY : common/CellLocation.obj
 
 # target to build an object file
-common/api/CellLocation.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.obj
-.PHONY : common/api/CellLocation.cpp.obj
+common/CellLocation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.obj
+.PHONY : common/CellLocation.cpp.obj
 
-common/api/CellLocation.i: common/api/CellLocation.cpp.i
+common/CellLocation.i: common/CellLocation.cpp.i
 
-.PHONY : common/api/CellLocation.i
+.PHONY : common/CellLocation.i
 
 # target to preprocess a source file
-common/api/CellLocation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.i
-.PHONY : common/api/CellLocation.cpp.i
+common/CellLocation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.i
+.PHONY : common/CellLocation.cpp.i
 
-common/api/CellLocation.s: common/api/CellLocation.cpp.s
+common/CellLocation.s: common/CellLocation.cpp.s
 
-.PHONY : common/api/CellLocation.s
+.PHONY : common/CellLocation.s
 
 # target to generate assembly for a file
-common/api/CellLocation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/api/CellLocation.cpp.s
-.PHONY : common/api/CellLocation.cpp.s
+common/CellLocation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/CellLocation.cpp.s
+.PHONY : common/CellLocation.cpp.s
 
-common/api/EvaluationContext.obj: common/api/EvaluationContext.cpp.obj
+common/Token.obj: common/Token.cpp.obj
 
-.PHONY : common/api/EvaluationContext.obj
+.PHONY : common/Token.obj
 
 # target to build an object file
-common/api/EvaluationContext.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.obj
-.PHONY : common/api/EvaluationContext.cpp.obj
+common/Token.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/Token.cpp.obj
+.PHONY : common/Token.cpp.obj
 
-common/api/EvaluationContext.i: common/api/EvaluationContext.cpp.i
+common/Token.i: common/Token.cpp.i
 
-.PHONY : common/api/EvaluationContext.i
-
-# target to preprocess a source file
-common/api/EvaluationContext.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.i
-.PHONY : common/api/EvaluationContext.cpp.i
-
-common/api/EvaluationContext.s: common/api/EvaluationContext.cpp.s
-
-.PHONY : common/api/EvaluationContext.s
-
-# target to generate assembly for a file
-common/api/EvaluationContext.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/api/EvaluationContext.cpp.s
-.PHONY : common/api/EvaluationContext.cpp.s
-
-common/api/Expression.obj: common/api/Expression.cpp.obj
-
-.PHONY : common/api/Expression.obj
-
-# target to build an object file
-common/api/Expression.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.obj
-.PHONY : common/api/Expression.cpp.obj
-
-common/api/Expression.i: common/api/Expression.cpp.i
-
-.PHONY : common/api/Expression.i
+.PHONY : common/Token.i
 
 # target to preprocess a source file
-common/api/Expression.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.i
-.PHONY : common/api/Expression.cpp.i
+common/Token.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/Token.cpp.i
+.PHONY : common/Token.cpp.i
 
-common/api/Expression.s: common/api/Expression.cpp.s
+common/Token.s: common/Token.cpp.s
 
-.PHONY : common/api/Expression.s
-
-# target to generate assembly for a file
-common/api/Expression.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/api/Expression.cpp.s
-.PHONY : common/api/Expression.cpp.s
-
-common/lexer/Token.obj: common/lexer/Token.cpp.obj
-
-.PHONY : common/lexer/Token.obj
-
-# target to build an object file
-common/lexer/Token.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.obj
-.PHONY : common/lexer/Token.cpp.obj
-
-common/lexer/Token.i: common/lexer/Token.cpp.i
-
-.PHONY : common/lexer/Token.i
-
-# target to preprocess a source file
-common/lexer/Token.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.i
-.PHONY : common/lexer/Token.cpp.i
-
-common/lexer/Token.s: common/lexer/Token.cpp.s
-
-.PHONY : common/lexer/Token.s
+.PHONY : common/Token.s
 
 # target to generate assembly for a file
-common/lexer/Token.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/lexer/Token.cpp.s
-.PHONY : common/lexer/Token.cpp.s
+common/Token.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectPOO.dir\build.make CMakeFiles/ProiectPOO.dir/common/Token.cpp.s
+.PHONY : common/Token.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -502,21 +421,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ProiectPOO
-	@echo ... common/api/BasicSpreadsheet.obj
-	@echo ... common/api/BasicSpreadsheet.i
-	@echo ... common/api/BasicSpreadsheet.s
-	@echo ... common/api/CellLocation.obj
-	@echo ... common/api/CellLocation.i
-	@echo ... common/api/CellLocation.s
-	@echo ... common/api/EvaluationContext.obj
-	@echo ... common/api/EvaluationContext.i
-	@echo ... common/api/EvaluationContext.s
-	@echo ... common/api/Expression.obj
-	@echo ... common/api/Expression.i
-	@echo ... common/api/Expression.s
-	@echo ... common/lexer/Token.obj
-	@echo ... common/lexer/Token.i
-	@echo ... common/lexer/Token.s
+	@echo ... common/CellLocation.obj
+	@echo ... common/CellLocation.i
+	@echo ... common/CellLocation.s
+	@echo ... common/Token.obj
+	@echo ... common/Token.i
+	@echo ... common/Token.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

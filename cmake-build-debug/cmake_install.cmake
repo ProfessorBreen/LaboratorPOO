@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/tirzi/Desktop/ProiectPOO
+# Install script for directory: C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/tirzi/Desktop/ProiectPOO/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

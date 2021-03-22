@@ -1,34 +1,21 @@
-#include "../common/api/Expression.cpp"
-#include "../common/lexer/Token.cpp"
-#include <set>
+#include "HFiles/CellRef.h"
 
-using namespace std;
-
-class CellRef : public Expression
+CellRef::CellRef(CellLocation cl) : cl(std::move(cl))
 {
-private:
-    CellLocation cl;
+}
 
-public:
-    explicit CellRef(CellLocation cl) : cl(cl)
-    {
-        this->cl = cl;
-    }
+double CellRef::evaluate(Spreadsheet &context)
+{
+    return context.getCellValue(cl);
+}
 
-    double evaluate(EvaluationContext context) override
-    {
-        return context.getCellValue(cl);
-    }
+void CellRef::findCellReferences(set<CellLocation> dependencies)
+{
+    dependencies.insert(cl);
+}
 
-    void findCellReferences(set<CellLocation> dependencies) override
-    {
-        dependencies.insert(cl);
-    }
-
-    friend ostream &operator<<(std::ostream &strm, const CellRef &cellRef)
-    {
-        strm << cellRef.cl;
-        return strm;
-    }
-};
-
+ostream &operator<<(ostream &strm, const CellRef &cellRef)
+{
+    strm << cellRef.cl;
+    return strm;
+}

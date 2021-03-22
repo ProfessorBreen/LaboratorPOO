@@ -1,103 +1,40 @@
-#include "Cell.cpp"
-#include "CycleDetector.cpp"
-#include <map>
+#include "HFiles/Spreadsheet.h"
 
-using namespace std;
+#include <utility>
 
-class Spreadsheet : public BasicSpreadsheet
+void Spreadsheet::findCellReferences(CellLocation subject, set<CellLocation> target)
 {
-private:
-    map<CellLocation, Cell> spreadsheet;
-public:
-    Spreadsheet()
-    {}
+    getOrCreate(std::move(subject)).findCellReferences(std::move(target));
+}
 
-    double evaluateExpression(string expression)
-    {
-        Expression expr = Parser::parse(expression);
-        return expr.evaluate(*this);
-    }
+void Spreadsheet::recalculate(CellLocation location)
+{
+    getOrCreate(std::move(location)).recalculate();
+}
 
-    void setCellExpression(CellLocation location, string input) override
-    {
-        CycleDetector cycleDetector = CycleDetector(*this);
-        set<CellLocation> vis;
+void Spreadsheet::removeDependency(CellLocation dependent, CellLocation dependency)
+{
+    Cell cell = getOrCreate(std::move(dependency));
+    cell.removeDependent(std::move(dependent));
+}
 
-        if (spreadsheet.find(location) != spreadsheet.end())
-        {
-            Cell curCell = spreadsheet[location];
-            curCell.setExpression(input);
+void Spreadsheet::addDependency(CellLocation dependent, CellLocation dependency)
+{
+    Cell cell = getOrCreate(std::move(dependency));
+    cell.addDependent(std::move(dependent));
+}
 
-            if (cycleDetector.hasCycleFrom(location))
-                curCell.setExpression("0.0");
+string Spreadsheet::getCellDisplay(CellLocation location)
+{
+    return getOrCreate(std::move(location)).toString();
+}
 
-            recalculate(location);
-            spreadsheet[location] = curCell;
-        }
-        else
-        {
-            Cell newCell = Cell(*this, location);
-            spreadsheet[location] = newCell;
-            newCell.setExpression(input);
+string Spreadsheet::getCellExpression(CellLocation location)
+{
+    return getOrCreate(std::move(location)).getExpression();
+}
 
-            if (cycleDetector.hasCycleFrom(location))
-                newCell.setExpression("0.0");
-
-            recalculate(location);
-            spreadsheet[location] = newCell;
-        }
-    }
-
-    double getCellValue(CellLocation location) override
-    {
-        return getOrCreate(location).getValue();
-    }
-
-    string getCellExpression(CellLocation location) override
-    {
-        return getOrCreate(location).getExpression();
-    }
-
-    string getCellDisplay(CellLocation location) override
-    {
-        return getOrCreate(location).toString();
-    }
-
-    void addDependency(CellLocation dependent, CellLocation dependency) override
-    {
-        Cell cell = getOrCreate(dependency);
-        cell.addDependent(dependent);
-    }
-
-
-    void removeDependency(CellLocation dependent, CellLocation dependency) override
-    {
-        Cell cell = getOrCreate(dependency);
-        cell.removeDependent(dependent);
-    }
-
-
-    void recalculate(CellLocation location) override
-    {
-        getOrCreate(location).recalculate();
-    }
-
-    void findCellReferences(CellLocation subject, set<CellLocation> target) override
-    {
-        getOrCreate(subject).findCellReferences(target);
-    }
-
-public:
-
-    Cell getOrCreate(CellLocation cellLocation)
-    {
-        if (spreadsheet.find(cellLocation) != spreadsheet.end())
-            return spreadsheet[cellLocation];
-
-        Cell newCell = Cell(*this, cellLocation);
-        spreadsheet[cellLocation] = newCell;
-        return newCell;
-    }
-
-
-};
+double Spreadsheet::getCellValue(CellLocation location)
+{
+    return getOrCreate(std::move(location)).getValue();
+}

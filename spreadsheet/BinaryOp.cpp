@@ -1,52 +1,37 @@
-#include "../common/api/Expression.cpp"
-#include "../common/lexer/Token.cpp"
-#include <cmath>
-#include <set>
-#include <utility>
+#include "HFiles/BinaryOp.h"
 
-using namespace std;
-
-class BinaryOp : public Expression
+BinaryOp::BinaryOp(const Expression &leftOperand, const Expression &rightOperand, Kind op)
 {
-private:
-    Expression leftOperand;
-    Expression rightOperand;
-    Kind op;
+    this->leftOperand = leftOperand.clone();
+    this->rightOperand = rightOperand.clone();
+    this->op = op;
+}
 
-public:
-    BinaryOp(Expression leftOperand, Expression rightOperand, Kind op)
-    {
-        this->leftOperand = move(leftOperand);
-        this->rightOperand = move(rightOperand);
-        this->op = op;
-    }
+double BinaryOp::evaluate(Spreadsheet &context)
+{
+    double expr1 = leftOperand->evaluate(context);
+    double expr2 = rightOperand->evaluate(context);
+    if (op == PLUS)
+        return expr1 + expr2;
+    else if (op == MINUS)
+        return expr1 - expr2;
+    else if (op == STAR)
+        return expr1 * expr2;
+    else if (op == SLASH)
+        return expr1 / expr2;
+    else if (op == CARET)
+        return pow(expr1, expr2);
+    return 0.0;
+}
 
-    double evaluate(EvaluationContext context) override
-    {
-        double expr1 = leftOperand.evaluate(context);
-        double expr2 = rightOperand.evaluate(context);
-        if (op == PLUS)
-            return expr1 + expr2;
-        else if (op == MINUS)
-            return expr1 - expr2;
-        else if (op == STAR)
-            return expr1 * expr2;
-        else if (op == SLASH)
-            return expr1 / expr2;
-        else if (op == CARET)
-            return pow(expr1, expr2);
-        return 0.0;
-    }
+void BinaryOp::findCellReferences(set<CellLocation> dependencies)
+{
+    leftOperand->findCellReferences(dependencies);
+    rightOperand->findCellReferences(dependencies);
+}
 
-    void findCellReferences(set<CellLocation> dependencies) override
-    {
-        leftOperand.findCellReferences(dependencies);
-        rightOperand.findCellReferences(dependencies);
-    }
-
-    friend ostream &operator<<(std::ostream &strm, const BinaryOp &binaryOp)
-    {
-        strm << "(" << leftOperand << kindToString(binaryOp.op) << rightOperand << ")";
-    }
-};
-
+ostream &operator<<(ostream &strm, const BinaryOp &binaryOp)
+{
+    strm << "(" << binaryOp.leftOperand << kindToString(binaryOp.op) << binaryOp.rightOperand << ")";
+    return strm;
+}
