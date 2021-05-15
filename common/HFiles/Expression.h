@@ -2,13 +2,13 @@
 
 #include "CellLocation.h"
 #include <set>
-#include <memory>
 
 using namespace std;
 
 class Spreadsheet;
 
-class Expression{
+class Expression
+{
 public:
     virtual double evaluate(Spreadsheet &context) = 0;
 

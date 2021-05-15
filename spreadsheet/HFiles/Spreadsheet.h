@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Cell.h"
+#include "Cell.h"
 #include <map>
 #include <utility>
 
@@ -19,23 +19,23 @@ public:
 
     void setCellExpression(const CellLocation &location, const string &input);
 
-    double getCellValue(CellLocation location);
+    double getCellValue(const CellLocation& location);
 
-    string getCellExpression(CellLocation location);
+    string getCellExpression(const CellLocation& location);
 
-    string getCellDisplay(CellLocation location);
+    string getCellDisplay(const CellLocation& location);
 
-    void addDependency(CellLocation dependent, CellLocation dependency);
+    void addDependency(CellLocation dependent, const CellLocation& dependency);
 
-    void removeDependency(CellLocation dependent, CellLocation dependency);
+    void removeDependency(CellLocation dependent, const CellLocation& dependency);
 
-    void recalculate(CellLocation location);
+    void recalculate(const CellLocation& location);
 
-    void findCellReferences(CellLocation subject, set<CellLocation> target);
+    void findCellReferences(const CellLocation& subject, set<CellLocation> target);
 
-    Cell getOrCreate(CellLocation cellLocation);
+    Cell getOrCreate(const CellLocation& cellLocation);
 
-    bool initCycleSearch(CellLocation location);
+    bool initCycleSearch(const CellLocation& location);
 
-    bool hasCycleFrom(CellLocation start);
+    bool hasCycleFrom(const CellLocation& start);
 };

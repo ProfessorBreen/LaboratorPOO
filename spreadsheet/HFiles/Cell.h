@@ -1,9 +1,9 @@
 #pragma once
 
-#include <utility>
-#include "../common/HFiles/CellLocation.h"
-#include "../common/HFiles/Expression.h"
+#include "../../common/HFiles/CellLocation.h"
+#include "../../common/HFiles/Expression.h"
 #include <set>
+#include <utility>
 
 using namespace std;
 
@@ -11,17 +11,21 @@ class Cell
 {
 private:
     CellLocation location;
-    double value;
+    double value{};
     optional<Expression *> expr;
     set<CellLocation> dependents;
 
+    void removeDependencies(Spreadsheet &spreadsheet);
+
+    void addDependencies(Spreadsheet &spreadsheet);
+
 public:
     Cell()
-    {}
+    = default;
 
-    Cell(CellLocation location);
+    explicit Cell(CellLocation location);
 
-    double getValue();
+    [[nodiscard]] double getValue() const;
 
     void setValue(double value);
 
@@ -31,14 +35,7 @@ public:
 
     set<CellLocation> getDependents();
 
-    void setExpression(Spreadsheet &spreadsheet, string input);
-
-private:
-    void removeDependencies(Spreadsheet &spreadsheet);
-
-    void addDependencies(Spreadsheet &spreadsheet);
-
-public:
+    void setExpression(Spreadsheet &spreadsheet, const string& input);
 
     string toString();
 
@@ -48,5 +45,5 @@ public:
 
     void findCellReferences(set<CellLocation> target);
 
-    void recalculate(Spreadsheet spreadsheet);
+    void recalculate(Spreadsheet &spreadsheet);
 };

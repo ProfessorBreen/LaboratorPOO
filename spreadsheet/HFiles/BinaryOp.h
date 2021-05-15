@@ -1,9 +1,9 @@
 #pragma once
 
+#include "../../common/HFiles/Expression.h"
+#include "Parser.h"
 #include <cmath>
 #include <set>
-#include "../../common/HFiles/Expression.h"
-#include "../Parser.h"
 
 using namespace std;
 
@@ -15,14 +15,9 @@ private:
     Kind op;
 
 public:
-    BinaryOp(Expression *leftOperand, Expression *rightOperand, Kind op)
-    {
-        this->leftOperand = leftOperand;
-        this->rightOperand = rightOperand;
-        this->op = op;
-    }
+    BinaryOp(Expression *leftOperand, Expression *rightOperand, Kind op);
 
-    double evaluate(Spreadsheet &context);
+    double evaluate(Spreadsheet &context) override;
 
     void findCellReferences(set<CellLocation> dependencies) override;
 

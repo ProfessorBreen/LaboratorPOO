@@ -1,10 +1,10 @@
 #pragma once
 
 #include "CellLocation.h"
-#include <optional>
 #include <cassert>
-#include <vector>
 #include <iostream>
+#include <optional>
+#include <vector>
 
 using namespace std;
 
@@ -42,11 +42,10 @@ public:
 
     explicit Token(CellLocation cellLocation);
 
+    friend ostream &operator<<(std::ostream &strm, const Token &token);
+
 private:
     Token(Kind kind, CellLocation cellLocationValue, double numberValue);
-
-public:
-    friend ostream &operator<<(std::ostream &strm, const Token &token);
 };
 
 vector<Token> tokenize(string input);

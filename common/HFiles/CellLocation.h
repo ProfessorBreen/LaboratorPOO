@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <cassert>
+#include <string>
 
 using namespace std;
 
@@ -10,12 +10,7 @@ class CellLocation
 private:
     string representation;
 public:
-    explicit operator string();
-
-    CellLocation()
-    {
-        representation = "";
-    }
+    CellLocation();
 
     explicit CellLocation(const string &input);
 
@@ -26,6 +21,8 @@ public:
     bool operator==(const CellLocation &b) const;
 
     bool operator<(const CellLocation &b) const;
+
+    explicit operator string();
 
     friend ostream &operator<<(std::ostream &strm, const CellLocation &cellLocation);
 };

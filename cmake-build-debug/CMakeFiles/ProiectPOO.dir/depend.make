@@ -11,7 +11,7 @@ CMakeFiles/ProiectPOO.dir/common/Token.cpp.obj: ../common/Token.cpp
 CMakeFiles/ProiectPOO.dir/main.cpp.obj: ../common/HFiles/CellLocation.h
 CMakeFiles/ProiectPOO.dir/main.cpp.obj: ../common/HFiles/Expression.h
 CMakeFiles/ProiectPOO.dir/main.cpp.obj: ../main.cpp
-CMakeFiles/ProiectPOO.dir/main.cpp.obj: ../spreadsheet/Cell.h
+CMakeFiles/ProiectPOO.dir/main.cpp.obj: ../spreadsheet/HFiles/Cell.h
 CMakeFiles/ProiectPOO.dir/main.cpp.obj: ../spreadsheet/HFiles/Spreadsheet.h
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj: ../common/HFiles/CellLocation.h
@@ -21,23 +21,23 @@ CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj: ../spreadsheet/BinaryOp.
 CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj: ../spreadsheet/HFiles/BinaryOp.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj: ../spreadsheet/HFiles/CellRef.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj: ../spreadsheet/HFiles/Number.h
-CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj: ../spreadsheet/Parser.h
+CMakeFiles/ProiectPOO.dir/spreadsheet/BinaryOp.cpp.obj: ../spreadsheet/HFiles/Parser.h
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../common/HFiles/CellLocation.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../common/HFiles/Expression.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../common/HFiles/Token.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../spreadsheet/Cell.cpp
-CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../spreadsheet/Cell.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../spreadsheet/HFiles/BinaryOp.h
+CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../spreadsheet/HFiles/Cell.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../spreadsheet/HFiles/CellRef.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../spreadsheet/HFiles/Number.h
+CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../spreadsheet/HFiles/Parser.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../spreadsheet/HFiles/Spreadsheet.h
-CMakeFiles/ProiectPOO.dir/spreadsheet/Cell.cpp.obj: ../spreadsheet/Parser.h
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj: ../common/HFiles/CellLocation.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj: ../common/HFiles/Expression.h
-CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj: ../spreadsheet/Cell.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj: ../spreadsheet/CellRef.cpp
+CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj: ../spreadsheet/HFiles/Cell.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj: ../spreadsheet/HFiles/CellRef.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/CellRef.cpp.obj: ../spreadsheet/HFiles/Spreadsheet.h
 
@@ -52,17 +52,17 @@ CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj: ../common/HFiles/Token.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj: ../spreadsheet/HFiles/BinaryOp.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj: ../spreadsheet/HFiles/CellRef.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj: ../spreadsheet/HFiles/Number.h
+CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj: ../spreadsheet/HFiles/Parser.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj: ../spreadsheet/Parser.cpp
-CMakeFiles/ProiectPOO.dir/spreadsheet/Parser.cpp.obj: ../spreadsheet/Parser.h
 
 CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../common/HFiles/CellLocation.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../common/HFiles/Expression.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../common/HFiles/Token.h
-CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../spreadsheet/Cell.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../spreadsheet/HFiles/BinaryOp.h
+CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../spreadsheet/HFiles/Cell.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../spreadsheet/HFiles/CellRef.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../spreadsheet/HFiles/Number.h
+CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../spreadsheet/HFiles/Parser.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../spreadsheet/HFiles/Spreadsheet.h
-CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../spreadsheet/Parser.h
 CMakeFiles/ProiectPOO.dir/spreadsheet/Spreadsheet.cpp.obj: ../spreadsheet/Spreadsheet.cpp
 

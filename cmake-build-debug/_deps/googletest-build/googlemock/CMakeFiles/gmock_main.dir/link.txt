@@ -1,0 +1,2 @@
+C:\PROGRA~1\CODEBL~1\MinGW\bin\ar.exe qc ..\..\..\lib\libgmock_maind.a  CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj
+C:\PROGRA~1\CODEBL~1\MinGW\bin\ranlib.exe ..\..\..\lib\libgmock_maind.a

@@ -1,20 +1,43 @@
-#include "Cell.h"
-#include "Parser.h"
+#include "HFiles/Cell.h"
+#include "HFiles/Parser.h"
 #include "HFiles/Spreadsheet.h"
+
+void Cell::addDependencies(Spreadsheet &spreadsheet)
+{
+    if (expr.has_value())
+    {
+        set<CellLocation> dependencies;
+        expr.value()->findCellReferences(dependencies);
+        for (const CellLocation &dependency : dependencies)
+            spreadsheet.addDependency(location, dependency);
+    }
+}
+
+void Cell::removeDependencies(Spreadsheet &spreadsheet)
+{
+    if (expr.has_value())
+    {
+        set<CellLocation> dependencies;
+        expr.value()->findCellReferences(dependencies);
+        for (const CellLocation &dependency : dependencies)
+            spreadsheet.removeDependency(location, dependency);
+    }
+}
+
 Cell::Cell(CellLocation location)
 {
     value = 0;
     expr = nullopt;
     dependents.clear();
-    this->location = location;
+    this->location = std::move(location);
 }
 
-void Cell::setValue(double value)
+void Cell::setValue(double val)
 {
-    this->value = value;
+    this->value = val;
 }
 
-double Cell::getValue()
+double Cell::getValue() const
 {
     return value;
 }
@@ -30,10 +53,15 @@ Expression *Cell::getPureExpression()
 {
     if (expr.has_value())
         return expr.value();
-    return NULL;
+    return nullptr;
 }
 
-void Cell::setExpression(Spreadsheet &spreadsheet, string input)
+set<CellLocation> Cell::getDependents()
+{
+    return dependents;
+}
+
+void Cell::setExpression(Spreadsheet &spreadsheet, const string &input)
 {
     removeDependencies(spreadsheet);
     if (input.empty())
@@ -45,26 +73,11 @@ void Cell::setExpression(Spreadsheet &spreadsheet, string input)
     }
 }
 
-void Cell::removeDependencies(Spreadsheet &spreadsheet)
+string Cell::toString()
 {
     if (expr.has_value())
-    {
-        set<CellLocation> dependencies;
-        expr.value()->findCellReferences(dependencies);
-        for (CellLocation dependency : dependencies)
-            spreadsheet.removeDependency(location, dependency);
-    }
-}
-
-void Cell::addDependencies(Spreadsheet &spreadsheet)
-{
-    if (expr.has_value())
-    {
-        set<CellLocation> dependencies;
-        expr.value()->findCellReferences(dependencies);
-        for (CellLocation dependency : dependencies)
-            spreadsheet.addDependency(location, dependency);
-    }
+        return to_string(value);
+    return "";
 }
 
 void Cell::addDependent(CellLocation location)
@@ -72,11 +85,9 @@ void Cell::addDependent(CellLocation location)
     dependents.insert(location);
 }
 
-string Cell::toString()
+void Cell::removeDependent(CellLocation location)
 {
-    if (expr.has_value())
-        return to_string(value);
-    return "";
+    dependents.erase(location);
 }
 
 void Cell::findCellReferences(set<CellLocation> target)
@@ -85,27 +96,17 @@ void Cell::findCellReferences(set<CellLocation> target)
     {
         set<CellLocation> dependencies;
         expr.value()->findCellReferences(dependencies);
-        for (auto i : dependencies)
+        for (const auto &i : dependencies)
             target.insert(i);
     }
 }
 
-void Cell::recalculate(Spreadsheet spreadsheet)
+void Cell::recalculate(Spreadsheet &spreadsheet)
 {
     if (!expr.has_value())
         value = 0.0;
     else
         value = expr.value()->evaluate(spreadsheet);
-    for (CellLocation dependent : dependents)
+    for (const CellLocation &dependent : dependents)
         spreadsheet.recalculate(dependent);
-}
-
-void Cell::removeDependent(CellLocation location)
-{
-    dependents.erase(location);
-}
-
-set<CellLocation> Cell::getDependents()
-{
-    return dependents;
 }

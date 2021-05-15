@@ -1,0 +1,2 @@
+C:\PROGRA~1\CODEBL~1\MinGW\bin\ar.exe qc ..\..\..\lib\libgtest_maind.a  CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj
+C:\PROGRA~1\CODEBL~1\MinGW\bin\ranlib.exe ..\..\..\lib\libgtest_maind.a

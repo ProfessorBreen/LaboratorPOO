@@ -1,5 +1,12 @@
 #include "HFiles/BinaryOp.h"
 
+BinaryOp::BinaryOp(Expression *leftOperand, Expression *rightOperand, Kind op)
+{
+    this->leftOperand = leftOperand;
+    this->rightOperand = rightOperand;
+    this->op = op;
+}
+
 double BinaryOp::evaluate(Spreadsheet &context)
 {
     double expr1 = leftOperand->evaluate(context);

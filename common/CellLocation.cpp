@@ -1,14 +1,14 @@
 #include "HFiles/CellLocation.h"
 
+CellLocation::CellLocation()
+{
+    representation = "";
+}
+
 CellLocation::CellLocation(const string &input)
 {
     assert(!input.empty());
     CellLocation::representation = input;
-}
-
-CellLocation::operator string()
-{
-    return representation;
 }
 
 CellLocation::CellLocation(int row, int column)
@@ -34,13 +34,18 @@ bool CellLocation::operator==(const CellLocation &b) const
     return representation == b.representation;
 }
 
+bool CellLocation::operator<(const CellLocation &b) const
+{
+    return representation < b.representation;
+}
+
+CellLocation::operator string()
+{
+    return representation;
+}
+
 ostream &operator<<(ostream &strm, const CellLocation &cellLocation)
 {
     strm << cellLocation.representation;
     return strm;
-}
-
-bool CellLocation::operator<(const CellLocation &b) const
-{
-    return representation<b.representation;
 }

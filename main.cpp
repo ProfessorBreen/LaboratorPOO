@@ -3,6 +3,7 @@
 #include "spreadsheet/HFiles/Spreadsheet.h"
 
 using namespace std;
+
 vector<string> res;
 
 void analyzeString(string s)
@@ -14,6 +15,7 @@ void analyzeString(string s)
         {
             if (!curStr.empty())
                 res.push_back(curStr);
+            curStr.clear();
         }
         else
             curStr.push_back(s[i]);
@@ -21,10 +23,10 @@ void analyzeString(string s)
         res.push_back(curStr);
 }
 
-string joinStrings(vector<string> v)
+string joinStrings(const vector<string> &v)
 {
     string s;
-    for (auto i : v)
+    for (const auto &i : v)
         s += i;
     return s;
 }
@@ -34,7 +36,7 @@ int main()
     Spreadsheet spreadsheet = Spreadsheet();
     string str;
     cout << "> ";
-    cin >> str;
+    getline(cin, str);
     while (!str.empty())
     {
         res.clear();
@@ -58,7 +60,7 @@ int main()
 
         cout << "\n";
         cout << "> ";
-        cin >> str;
+        getline(cin, str);
     }
     return 0;
 }

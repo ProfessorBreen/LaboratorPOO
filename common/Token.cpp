@@ -1,50 +1,5 @@
 #include "HFiles/Token.h"
 
-Token::Token(Kind kind)
-{
-    this->kind = kind;
-    cellLocationValue = nullopt;
-    numberValue = 0;
-    assert(kind != NUMBER && kind != CELL_LOCATION);
-}
-
-Token::Token(CellLocation cellLocation)
-{
-    this->kind = CELL_LOCATION;
-    cellLocationValue = cellLocation;
-    numberValue = 0;
-}
-
-Token::Token(double value)
-{
-    this->kind = NUMBER;
-    cellLocationValue = nullopt;
-    numberValue = value;
-}
-
-Token::Token(Kind kind, CellLocation cellLocationValue, double numberValue)
-{
-    this->kind = kind;
-    this->cellLocationValue = cellLocationValue;
-    this->numberValue = numberValue;
-}
-
-ostream &operator<<(ostream &strm, const Token &token)
-{
-    switch (token.kind)
-    {
-        case CELL_LOCATION:
-            strm << "CELL(" << token.cellLocationValue.value() << ")";
-            break;
-        case NUMBER:
-            strm << "NUMBER(" + to_string(token.numberValue) + ")";
-            break;
-        default:
-            strm << enum_str[token.kind];
-    }
-    return strm;
-}
-
 string kindToString(Kind kind)
 {
     switch (kind)
@@ -72,6 +27,51 @@ string kindToString(Kind kind)
         default:
             return "";
     }
+}
+
+Token::Token(Kind kind)
+{
+    this->kind = kind;
+    cellLocationValue = nullopt;
+    numberValue = 0;
+    assert(kind != NUMBER && kind != CELL_LOCATION);
+}
+
+Token::Token(double value)
+{
+    this->kind = NUMBER;
+    cellLocationValue = nullopt;
+    numberValue = value;
+}
+
+Token::Token(CellLocation cellLocation)
+{
+    this->kind = CELL_LOCATION;
+    cellLocationValue = cellLocation;
+    numberValue = 0;
+}
+
+ostream &operator<<(ostream &strm, const Token &token)
+{
+    switch (token.kind)
+    {
+        case CELL_LOCATION:
+            strm << "CELL(" << token.cellLocationValue.value() << ")";
+            break;
+        case NUMBER:
+            strm << "NUMBER(" + to_string(token.numberValue) + ")";
+            break;
+        default:
+            strm << enum_str[token.kind];
+    }
+    return strm;
+}
+
+Token::Token(Kind kind, CellLocation cellLocationValue, double numberValue)
+{
+    this->kind = kind;
+    this->cellLocationValue = cellLocationValue;
+    this->numberValue = numberValue;
 }
 
 vector<Token> tokenize(string input)

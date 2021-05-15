@@ -13,9 +13,9 @@ private:
 public:
     explicit CellRef(CellLocation cl);
 
-    double evaluate(Spreadsheet &context);
+    double evaluate(Spreadsheet &context) override;
 
-    void findCellReferences(set<CellLocation> dependencies);
+    void findCellReferences(set<CellLocation> dependencies) override;
 
     friend ostream &operator<<(std::ostream &strm, const CellRef &cellRef);
 };

@@ -11,11 +11,11 @@ private:
     double value;
 
 public:
-    Number(double value);
+    explicit Number(double value);
 
-    double evaluate(Spreadsheet &context);
+    double evaluate(Spreadsheet &context) override;
 
-    void findCellReferences(set<CellLocation> dependencies);
+    void findCellReferences(set<CellLocation> dependencies) override;
 
     friend ostream &operator<<(std::ostream &strm, const Number &number);
 };

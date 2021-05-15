@@ -1,4 +1,4 @@
-#include "Parser.h"
+#include "HFiles/Parser.h"
 
 Expression *Parser::parse(const string &input)
 {
@@ -11,8 +11,8 @@ Expression *Parser::parse(const string &input)
             throw invalid_argument("WRONG Token");
         if (token.kind == NUMBER)
         {
-            Number nr = Number(token.numberValue);
-            operandSt.push(&nr);
+            auto nr = new Number(token.numberValue);
+            operandSt.push(nr);
         }
         else if (token.kind == CELL_LOCATION)
         {
