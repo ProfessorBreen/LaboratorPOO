@@ -17,6 +17,8 @@ private:
 public:
     BinaryOp(Expression *leftOperand, Expression *rightOperand, Kind op);
 
+    BinaryOp(const BinaryOp &b);
+
     double evaluate(Spreadsheet &context) override;
 
     void findCellReferences(set<CellLocation> dependencies) override;

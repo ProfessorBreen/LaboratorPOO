@@ -20,3 +20,8 @@ ostream &operator<<(ostream &strm, const CellRef &cellRef)
     strm << cellRef.cl;
     return strm;
 }
+
+CellRef::CellRef(const CellRef &c)
+{
+    cl = c.cl;
+}

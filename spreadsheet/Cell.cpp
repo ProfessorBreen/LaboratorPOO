@@ -85,3 +85,14 @@ Cell::~Cell()
 {
     expr.reset();
 }
+
+Cell::Cell(const Cell &c)
+{
+    location = c.location;
+    value = c.value;
+    if (c.expr.has_value())
+        expr = c.expr.value();
+    else
+        expr = nullopt;
+    dependents = c.dependents;
+}

@@ -11,7 +11,7 @@ class Cell
 {
 private:
     CellLocation location;
-    double value{};
+    double value;
     optional<Expression *> expr;
     set<CellLocation> dependents;
 
@@ -23,15 +23,17 @@ public:
     Cell()
     = default;
 
-    explicit Cell(const CellLocation& location);
+    explicit Cell(const CellLocation &location);
+
+    Cell(const Cell &c);
 
     [[nodiscard]] double getValue() const;
 
-    void setExpression(Spreadsheet &spreadsheet, const string& input);
+    void setExpression(Spreadsheet &spreadsheet, const string &input);
 
-    void addDependent(const CellLocation& loc);
+    void addDependent(const CellLocation &loc);
 
-    void removeDependent(const CellLocation& loc);
+    void removeDependent(const CellLocation &loc);
 
     void findCellReferences(set<CellLocation> target);
 

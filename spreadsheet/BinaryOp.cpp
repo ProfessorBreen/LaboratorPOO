@@ -42,6 +42,13 @@ ostream &operator<<(ostream &strm, const BinaryOp &binaryOp)
 
 BinaryOp::~BinaryOp()
 {
-    delete &leftOperand;
-    delete &rightOperand;
+    delete leftOperand;
+    delete rightOperand;
+}
+
+BinaryOp::BinaryOp(const BinaryOp &b)
+{
+    leftOperand = b.leftOperand;
+    rightOperand = b.rightOperand;
+    op = b.op;
 }
