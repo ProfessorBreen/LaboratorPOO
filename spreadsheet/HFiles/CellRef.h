@@ -11,7 +11,7 @@ private:
     CellLocation cl;
 
 public:
-    explicit CellRef(CellLocation cl);
+    explicit CellRef(const CellLocation& cl);
 
     double evaluate(Spreadsheet &context) override;
 

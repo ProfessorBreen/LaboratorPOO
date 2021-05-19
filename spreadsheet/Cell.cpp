@@ -24,41 +24,17 @@ void Cell::removeDependencies(Spreadsheet &spreadsheet)
     }
 }
 
-Cell::Cell(CellLocation location)
+Cell::Cell(const CellLocation& location)
 {
     value = 0;
     expr = nullopt;
     dependents.clear();
-    this->location = std::move(location);
-}
-
-void Cell::setValue(double val)
-{
-    this->value = val;
+    this->location = location;
 }
 
 double Cell::getValue() const
 {
     return value;
-}
-
-string Cell::getExpression()
-{
-    if (expr.has_value())
-        return reinterpret_cast<basic_string<char, char_traits<char>, allocator<char>> &&>(expr.value());
-    return "";
-}
-
-Expression *Cell::getPureExpression()
-{
-    if (expr.has_value())
-        return expr.value();
-    return nullptr;
-}
-
-set<CellLocation> Cell::getDependents()
-{
-    return dependents;
 }
 
 void Cell::setExpression(Spreadsheet &spreadsheet, const string &input)
@@ -73,21 +49,15 @@ void Cell::setExpression(Spreadsheet &spreadsheet, const string &input)
     }
 }
 
-string Cell::toString()
+
+void Cell::addDependent(const CellLocation& loc)
 {
-    if (expr.has_value())
-        return to_string(value);
-    return "";
+    dependents.insert(loc);
 }
 
-void Cell::addDependent(CellLocation location)
+void Cell::removeDependent(const CellLocation& loc)
 {
-    dependents.insert(location);
-}
-
-void Cell::removeDependent(CellLocation location)
-{
-    dependents.erase(location);
+    dependents.erase(loc);
 }
 
 void Cell::findCellReferences(set<CellLocation> target)

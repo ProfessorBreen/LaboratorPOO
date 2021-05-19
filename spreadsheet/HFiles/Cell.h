@@ -23,25 +23,15 @@ public:
     Cell()
     = default;
 
-    explicit Cell(CellLocation location);
+    explicit Cell(const CellLocation& location);
 
     [[nodiscard]] double getValue() const;
 
-    void setValue(double value);
-
-    string getExpression();
-
-    Expression *getPureExpression();
-
-    set<CellLocation> getDependents();
-
     void setExpression(Spreadsheet &spreadsheet, const string& input);
 
-    string toString();
+    void addDependent(const CellLocation& loc);
 
-    void addDependent(CellLocation location);
-
-    void removeDependent(CellLocation location);
+    void removeDependent(const CellLocation& loc);
 
     void findCellReferences(set<CellLocation> target);
 

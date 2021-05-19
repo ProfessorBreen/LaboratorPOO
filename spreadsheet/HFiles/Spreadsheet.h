@@ -21,13 +21,9 @@ public:
 
     double getCellValue(const CellLocation& location);
 
-    string getCellExpression(const CellLocation& location);
+    void addDependency(const CellLocation& dependent, const CellLocation& dependency);
 
-    string getCellDisplay(const CellLocation& location);
-
-    void addDependency(CellLocation dependent, const CellLocation& dependency);
-
-    void removeDependency(CellLocation dependent, const CellLocation& dependency);
+    void removeDependency(const CellLocation& dependent, const CellLocation& dependency);
 
     void recalculate(const CellLocation& location);
 

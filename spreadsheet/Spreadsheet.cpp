@@ -45,26 +45,16 @@ double Spreadsheet::getCellValue(const CellLocation &location)
     return getOrCreate(location).getValue();
 }
 
-string Spreadsheet::getCellExpression(const CellLocation &location)
-{
-    return getOrCreate(location).getExpression();
-}
-
-string Spreadsheet::getCellDisplay(const CellLocation &location)
-{
-    return getOrCreate(location).toString();
-}
-
-void Spreadsheet::addDependency(CellLocation dependent, const CellLocation &dependency)
+void Spreadsheet::addDependency(const CellLocation &dependent, const CellLocation &dependency)
 {
     Cell cell = getOrCreate(dependency);
-    cell.addDependent(std::move(dependent));
+    cell.addDependent(dependent);
 }
 
-void Spreadsheet::removeDependency(CellLocation dependent, const CellLocation &dependency)
+void Spreadsheet::removeDependency(const CellLocation &dependent, const CellLocation &dependency)
 {
     Cell cell = getOrCreate(dependency);
-    cell.removeDependent(std::move(dependent));
+    cell.removeDependent(dependent);
 }
 
 void Spreadsheet::recalculate(const CellLocation &location)
