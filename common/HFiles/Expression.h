@@ -13,4 +13,8 @@ public:
     virtual double evaluate(Spreadsheet &context) = 0;
 
     virtual void findCellReferences(set<CellLocation> dependencies) = 0;
+
+    virtual ~Expression()
+    {
+    }
 };
