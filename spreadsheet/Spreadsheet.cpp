@@ -10,7 +10,8 @@ double Spreadsheet::evaluateExpression(const string &expression)
 
 void Spreadsheet::setCellExpression(const CellLocation &location, const string &input)
 {
-    //initCycleSearch(location);
+    if (spreadsheet.find(location) != spreadsheet.end())
+        initCycleSearch(location);
     set<CellLocation> vis;
 
     if (spreadsheet.find(location) != spreadsheet.end())
@@ -18,10 +19,11 @@ void Spreadsheet::setCellExpression(const CellLocation &location, const string &
         Cell curCell = spreadsheet[location];
         curCell.setExpression(*this, input);
 
-        //if (hasCycleFrom(location))
-            //curCell.setExpression(*this, "0.0");
+        if (hasCycleFrom(location))
+            curCell.setExpression(*this, "0.0");
 
         recalculate(location);
+        curCell.recalculate(*this);
         spreadsheet[location] = curCell;
     }
     else
@@ -30,9 +32,10 @@ void Spreadsheet::setCellExpression(const CellLocation &location, const string &
         spreadsheet[location] = newCell;
         newCell.setExpression(*this, input);
 
-        //if (hasCycleFrom(location))
-            //newCell.setExpression(*this, "0.0");
+        if (hasCycleFrom(location))
+            newCell.setExpression(*this, "0.0");
         recalculate(location);
+        newCell.recalculate(*this);
         spreadsheet[location] = newCell;
     }
 }
