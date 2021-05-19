@@ -16,6 +16,8 @@ public:
 
     CellLocation(int row, int column);
 
+    CellLocation(const CellLocation &c);
+
     static string getColumnName(int column);
 
     bool operator==(const CellLocation &b) const;

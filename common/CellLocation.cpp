@@ -17,6 +17,11 @@ CellLocation::CellLocation(int row, int column)
     representation = getColumnName(column) + to_string(row + 1);
 }
 
+CellLocation::CellLocation(const CellLocation &c)
+{
+    representation = c.representation;
+}
+
 string CellLocation::getColumnName(int column)
 {
     string str;
