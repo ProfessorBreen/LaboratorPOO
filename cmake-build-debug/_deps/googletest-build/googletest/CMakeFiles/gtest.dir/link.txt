@@ -1,2 +1,0 @@
-C:\PROGRA~1\CODEBL~1\MinGW\bin\ar.exe qc ..\..\..\lib\libgtestd.a  CMakeFiles/gtest.dir/src/gtest-all.cc.obj
-C:\PROGRA~1\CODEBL~1\MinGW\bin\ranlib.exe ..\..\..\lib\libgtestd.a

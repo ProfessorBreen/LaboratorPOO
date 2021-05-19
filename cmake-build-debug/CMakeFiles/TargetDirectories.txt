@@ -1,3 +1,0 @@
-C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/cmake-build-debug/CMakeFiles/ProiectPOO.dir
-C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/cmake-build-debug/CMakeFiles/edit_cache.dir
