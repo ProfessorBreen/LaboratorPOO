@@ -39,6 +39,12 @@ bool CellLocation::operator<(const CellLocation &b) const
     return representation < b.representation;
 }
 
+CellLocation &CellLocation::operator=(const CellLocation &b)
+{
+    representation = b.representation;
+    return *this;
+}
+
 CellLocation::operator string()
 {
     return representation;

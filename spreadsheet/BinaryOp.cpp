@@ -18,7 +18,11 @@ double BinaryOp::evaluate(Spreadsheet &context)
     else if (op == STAR)
         return expr1 * expr2;
     else if (op == SLASH)
+    {
+        if (expr2 == 0)
+            throw overflow_error("Division by zero is forbidden");
         return expr1 / expr2;
+    }
     else if (op == CARET)
         return pow(expr1, expr2);
     return 0.0;

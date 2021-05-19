@@ -22,6 +22,8 @@ public:
 
     bool operator<(const CellLocation &b) const;
 
+    CellLocation &operator=(const CellLocation &b);
+
     explicit operator string();
 
     friend ostream &operator<<(std::ostream &strm, const CellLocation &cellLocation);
