@@ -23,6 +23,6 @@ public:
 
     friend ostream &operator<<(std::ostream &strm, const BinaryOp &binaryOp);
 
-    virtual ~BinaryOp();
+    ~BinaryOp();
 };
 

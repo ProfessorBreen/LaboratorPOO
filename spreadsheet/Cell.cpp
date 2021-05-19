@@ -83,5 +83,5 @@ void Cell::recalculate(Spreadsheet &spreadsheet)
 
 Cell::~Cell()
 {
-    expr = nullopt;
+    expr.reset();
 }

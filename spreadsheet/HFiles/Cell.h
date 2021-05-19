@@ -37,5 +37,5 @@ public:
 
     void recalculate(Spreadsheet &spreadsheet);
 
-    virtual ~Cell();
+    ~Cell();
 };
