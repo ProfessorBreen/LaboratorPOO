@@ -116,50 +116,32 @@ int main()
     {
         res.clear();
         analyzeString(str);
-        if (res.size() == 1)
+        try
         {
-            if (isalpha(res[0][0]))
+            if (res.size() == 1)
             {
-                try
-                {
+                if (isalpha(res[0][0]))
                     cout << spreadsheet.getCellValue(CellLocation(res[0]));
-                }
-                catch (exception &e)
-                {
-                    cout << "An error has occurred\n";
-                }
+                else
+                    cout << res[0];
             }
-            else
-                cout << res[0];
-        }
-        else if (res[1] == "=")
-        {
-            string firstCell = res[0];
-            res.erase(res.begin());
-            res.erase(res.begin());
-            try
+            else if (res[1] == "=")
             {
+                string firstCell = res[0];
+                res.erase(res.begin());
+                res.erase(res.begin());
                 spreadsheet.setCellExpression(CellLocation(firstCell), joinStrings(res));
             }
-            catch (invalid_argument &e)
-            {
-                cout << "You entered an illegal character or a malformed expression\n";
-            }
-            catch (overflow_error &e)
-            {
-                cout << "Division by zero is forbidden\n";
-            }
-        }
-        else
-        {
-            try
-            {
+            else
                 cout << spreadsheet.evaluateExpression(joinStrings(res));
-            }
-            catch (exception &e)
-            {
-                cout << "You entered an illegal character or a malformed expression\n";
-            }
+        }
+        catch (invalid_argument &e)
+        {
+            cout << "You entered an illegal character or a malformed expression\n";
+        }
+        catch (overflow_error &e)
+        {
+            cout << "Division by zero is forbidden\n";
         }
 
         cout << "\n";
