@@ -25,7 +25,7 @@ public:
 
     explicit Cell(const CellLocation &location);
 
-    Cell(const Cell &c);
+    Cell(const Cell &c) = default;
 
     [[nodiscard]] double getValue() const;
 
@@ -39,5 +39,5 @@ public:
 
     void recalculate(Spreadsheet &spreadsheet);
 
-    ~Cell();
+    //~Cell();
 };

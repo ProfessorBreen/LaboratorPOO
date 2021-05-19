@@ -17,7 +17,7 @@ private:
 public:
     BinaryOp(Expression *leftOperand, Expression *rightOperand, Kind op);
 
-    BinaryOp(const BinaryOp &b);
+    BinaryOp(const BinaryOp &b) = default;
 
     double evaluate(Spreadsheet &context) override;
 
@@ -25,6 +25,6 @@ public:
 
     friend ostream &operator<<(std::ostream &strm, const BinaryOp &binaryOp);
 
-    ~BinaryOp();
+    //~BinaryOp() override;
 };
 
