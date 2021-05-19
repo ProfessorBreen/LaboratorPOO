@@ -87,7 +87,7 @@ vector<Token> tokenize(string input)
         if (isalpha(input[i]))
         {
             if (haveIntNumber)
-                throw invalid_argument(&"Illegal symbol: " [ input[i]]);
+                throw invalid_argument(&"Illegal symbol: "[input[i]]);
             haveCellRef = true;
             cellString.push_back(input[i]);
         }
@@ -127,12 +127,12 @@ vector<Token> tokenize(string input)
             if (haveIntNumber)
                 haveIntNumber = 2;
             else
-                throw invalid_argument(&"Illegal symbol: " [ input[i]]);
+                throw invalid_argument("Illegal symbol: "s + input[i]);
         }
         else
         {
             if (i >= 1 && (input[i - 1] == '.' || input[i - 1] == ' '))
-                throw invalid_argument(&"Illegal symbol: " [ input[i]]);
+                throw invalid_argument("Illegal symbol: "s + input[i]);
             else
             {
                 if (haveCellRef)
