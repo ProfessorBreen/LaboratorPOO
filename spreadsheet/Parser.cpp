@@ -17,7 +17,7 @@ Expression *Parser::parse(const string &input)
         else if (token.kind == CELL_LOCATION)
         {
             CellRef cellRef = CellRef(token.cellLocationValue.value());
-            operandSt.push(&cellRef);
+            operandSt.push(new CellRef(cellRef));
         }
         else
         {
@@ -31,7 +31,7 @@ Expression *Parser::parse(const string &input)
                     Expression *exp2 = operandSt.top();
                     operandSt.pop();
                     BinaryOp binOP = BinaryOp(exp2, exp1, topOperator);
-                    operandSt.push(&binOP);
+                    operandSt.push(new BinaryOp(binOP));
 
                     operatorSt.pop();
                     if (operatorSt.empty())
@@ -52,7 +52,7 @@ Expression *Parser::parse(const string &input)
         Kind topOperator = operatorSt.top();
         operatorSt.pop();
         BinaryOp binOP = BinaryOp(exp2, exp1, topOperator);
-        operandSt.push(&binOP);
+        operandSt.push(new BinaryOp(binOP));
     }
     return operandSt.top();
 }

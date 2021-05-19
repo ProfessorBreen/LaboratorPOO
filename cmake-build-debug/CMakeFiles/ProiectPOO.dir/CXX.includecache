@@ -6,3 +6,93 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/CellLocation.h
+cassert
+-
+string
+-
+
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/Expression.h
+CellLocation.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/CellLocation.h
+set
+-
+
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/Token.h
+CellLocation.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/CellLocation.h
+cassert
+-
+iostream
+-
+optional
+-
+vector
+-
+
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/BinaryOp.h
+../../common/HFiles/Expression.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/Expression.h
+Parser.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/Parser.h
+cmath
+-
+set
+-
+
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/Cell.h
+../../common/HFiles/CellLocation.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/CellLocation.h
+../../common/HFiles/Expression.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/Expression.h
+set
+-
+utility
+-
+
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/CellRef.h
+../../common/HFiles/Expression.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/Expression.h
+set
+-
+
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/Number.h
+../../common/HFiles/Expression.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/Expression.h
+set
+-
+
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/Parser.h
+../../common/HFiles/Token.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/Token.h
+../../common/HFiles/Expression.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/common/HFiles/Expression.h
+Number.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/Number.h
+CellRef.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/CellRef.h
+BinaryOp.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/BinaryOp.h
+stack
+-
+stdexcept
+-
+string
+-
+vector
+-
+
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/Spreadsheet.h
+Cell.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/Cell.h
+map
+-
+utility
+-
+
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/Spreadsheet.cpp
+HFiles/Spreadsheet.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/Spreadsheet.h
+HFiles/Parser.h
+C:/Users/tirzi/Desktop/UNIBUC/Materii/Semestrul 2/POO/LaboratorPOO/spreadsheet/HFiles/Parser.h
+

@@ -10,7 +10,7 @@ double Spreadsheet::evaluateExpression(const string &expression)
 
 void Spreadsheet::setCellExpression(const CellLocation &location, const string &input)
 {
-    initCycleSearch(location);
+    //initCycleSearch(location);
     set<CellLocation> vis;
 
     if (spreadsheet.find(location) != spreadsheet.end())
@@ -18,8 +18,8 @@ void Spreadsheet::setCellExpression(const CellLocation &location, const string &
         Cell curCell = spreadsheet[location];
         curCell.setExpression(*this, input);
 
-        if (hasCycleFrom(location))
-            curCell.setExpression(*this, "0.0");
+        //if (hasCycleFrom(location))
+            //curCell.setExpression(*this, "0.0");
 
         recalculate(location);
         spreadsheet[location] = curCell;
@@ -30,9 +30,8 @@ void Spreadsheet::setCellExpression(const CellLocation &location, const string &
         spreadsheet[location] = newCell;
         newCell.setExpression(*this, input);
 
-        if (hasCycleFrom(location))
-            newCell.setExpression(*this, "0.0");
-
+        //if (hasCycleFrom(location))
+            //newCell.setExpression(*this, "0.0");
         recalculate(location);
         spreadsheet[location] = newCell;
     }
@@ -72,6 +71,9 @@ void Spreadsheet::recalculate(const CellLocation &location)
 
 void Spreadsheet::findCellReferences(const CellLocation &subject, set<CellLocation> target)
 {
+    if (spreadsheet.find(subject) == spreadsheet.end())
+        return;
+
     getOrCreate(subject).findCellReferences(std::move(target));
 }
 
@@ -79,7 +81,8 @@ Cell Spreadsheet::getOrCreate(const CellLocation &cellLocation)
 {
     if (spreadsheet.find(cellLocation) != spreadsheet.end())
         return spreadsheet[cellLocation];
-    Cell newCell = Cell(CellLocation("a1"));
+
+    Cell newCell = Cell(CellLocation(cellLocation));
     spreadsheet[cellLocation] = newCell;
     return newCell;
 }
