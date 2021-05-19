@@ -36,4 +36,6 @@ public:
     void findCellReferences(set<CellLocation> target);
 
     void recalculate(Spreadsheet &spreadsheet);
+
+    virtual ~Cell();
 };

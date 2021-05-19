@@ -24,7 +24,7 @@ void Cell::removeDependencies(Spreadsheet &spreadsheet)
     }
 }
 
-Cell::Cell(const CellLocation& location)
+Cell::Cell(const CellLocation &location)
 {
     value = 0;
     expr = nullopt;
@@ -50,12 +50,12 @@ void Cell::setExpression(Spreadsheet &spreadsheet, const string &input)
 }
 
 
-void Cell::addDependent(const CellLocation& loc)
+void Cell::addDependent(const CellLocation &loc)
 {
     dependents.insert(loc);
 }
 
-void Cell::removeDependent(const CellLocation& loc)
+void Cell::removeDependent(const CellLocation &loc)
 {
     dependents.erase(loc);
 }
@@ -79,4 +79,9 @@ void Cell::recalculate(Spreadsheet &spreadsheet)
         value = expr.value()->evaluate(spreadsheet);
     for (const CellLocation &dependent : dependents)
         spreadsheet.recalculate(dependent);
+}
+
+Cell::~Cell()
+{
+    expr = nullopt;
 }

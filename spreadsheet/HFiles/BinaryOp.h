@@ -22,5 +22,7 @@ public:
     void findCellReferences(set<CellLocation> dependencies) override;
 
     friend ostream &operator<<(std::ostream &strm, const BinaryOp &binaryOp);
+
+    virtual ~BinaryOp();
 };
 
