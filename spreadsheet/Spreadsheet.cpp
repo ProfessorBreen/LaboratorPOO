@@ -5,7 +5,9 @@ double Spreadsheet::evaluateExpression(const string &expression)
 {
     Expression *expr = Parser::parse(expression);
     visited.clear();
-    return expr->evaluate(*this);
+    double result = expr->evaluate(*this);
+    delete expr;
+    return result;
 }
 
 void Spreadsheet::setCellExpression(const CellLocation &location, const string &input)
@@ -100,4 +102,11 @@ bool Spreadsheet::hasCycleFrom(const CellLocation &start)
     }
     visited.erase(start);
     return false;
+}
+
+void Spreadsheet::deallocateCells()
+{
+    for (auto &it : spreadsheet)
+        it.second.destroyCell();
+    spreadsheet.clear();
 }

@@ -21,4 +21,3 @@ public:
 
     friend ostream &operator<<(std::ostream &strm, const CellRef &cellRef);
 };
-

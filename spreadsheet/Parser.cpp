@@ -16,8 +16,8 @@ Expression *Parser::parse(const string &input)
         }
         else if (token.kind == CELL_LOCATION)
         {
-            CellRef cellRef = CellRef(token.cellLocationValue.value());
-            operandSt.push(new CellRef(cellRef));
+            CellRef *cellRef = new CellRef(token.cellLocationValue.value());
+            operandSt.push(cellRef);
         }
         else
         {
@@ -30,8 +30,8 @@ Expression *Parser::parse(const string &input)
                     operandSt.pop();
                     Expression *exp2 = operandSt.top();
                     operandSt.pop();
-                    BinaryOp binOP = BinaryOp(exp2, exp1, topOperator);
-                    operandSt.push(new BinaryOp(binOP));
+                    BinaryOp *binOp = new BinaryOp(exp2, exp1, topOperator);
+                    operandSt.push(binOp);
 
                     operatorSt.pop();
                     if (operatorSt.empty())
@@ -51,10 +51,13 @@ Expression *Parser::parse(const string &input)
 
         Kind topOperator = operatorSt.top();
         operatorSt.pop();
-        BinaryOp binOP = BinaryOp(exp2, exp1, topOperator);
-        operandSt.push(new BinaryOp(binOP));
+        BinaryOp *binOp = new BinaryOp(exp2, exp1, topOperator);
+        operandSt.push(binOp);
     }
-    return operandSt.top();
+
+    Expression *result = operandSt.top();
+    operandSt.pop();
+    return result;
 }
 
 bool Parser::hasHigherPriority(Kind kind, Kind other)

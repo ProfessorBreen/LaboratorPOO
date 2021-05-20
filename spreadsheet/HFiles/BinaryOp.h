@@ -25,6 +25,5 @@ public:
 
     friend ostream &operator<<(std::ostream &strm, const BinaryOp &binaryOp);
 
-    //~BinaryOp() override;
+    ~BinaryOp() override;
 };
-

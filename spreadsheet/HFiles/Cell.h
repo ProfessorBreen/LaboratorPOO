@@ -39,5 +39,7 @@ public:
 
     void recalculate(Spreadsheet &spreadsheet);
 
-    //~Cell();
+    void destroyCell();
+
+    ~Cell();
 };

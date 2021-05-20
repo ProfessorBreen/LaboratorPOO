@@ -39,9 +39,9 @@ ostream &operator<<(ostream &strm, const BinaryOp &binaryOp)
     strm << "(" << binaryOp.leftOperand << kindToString(binaryOp.op) << binaryOp.rightOperand << ")";
     return strm;
 }
-/*
+
 BinaryOp::~BinaryOp()
 {
     delete leftOperand;
     delete rightOperand;
-}*/
+}

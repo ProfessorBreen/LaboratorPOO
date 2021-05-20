@@ -92,6 +92,8 @@ void autoTesting()
     assert(testSp.evaluateExpression("a2*8+a1+3") == 161);
     assert(testSp.evaluateExpression("a4") == 0);
     cout << "Tests passed" << "\n";
+
+    testSp.deallocateCells();
 }
 
 int main()
@@ -148,5 +150,7 @@ int main()
         cout << "> ";
         getline(cin, str);
     }
+
+    spreadsheet.deallocateCells();
     return 0;
 }
