@@ -31,9 +31,5 @@ public:
 
     Cell getOrCreate(const CellLocation& cellLocation);
 
-    bool initCycleSearch(const CellLocation& location);
-
-    bool hasCycleFrom(const CellLocation& start);
-
     void deallocateCells();
 };

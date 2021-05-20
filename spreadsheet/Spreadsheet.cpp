@@ -13,18 +13,10 @@ double Spreadsheet::evaluateExpression(const string &expression)
 void Spreadsheet::setCellExpression(const CellLocation &location, const string &input)
 {
     if (spreadsheet.find(location) != spreadsheet.end())
-        initCycleSearch(location);
-    set<CellLocation> vis;
-
-    if (spreadsheet.find(location) != spreadsheet.end())
     {
         Cell curCell = spreadsheet[location];
         curCell.setExpression(*this, input);
 
-        if (hasCycleFrom(location))
-            curCell.setExpression(*this, "0.0");
-
-        recalculate(location);
         curCell.recalculate(*this);
         spreadsheet[location] = curCell;
     }
@@ -34,9 +26,6 @@ void Spreadsheet::setCellExpression(const CellLocation &location, const string &
         spreadsheet[location] = newCell;
         newCell.setExpression(*this, input);
 
-        if (hasCycleFrom(location))
-            newCell.setExpression(*this, "0.0");
-        recalculate(location);
         newCell.recalculate(*this);
         spreadsheet[location] = newCell;
     }
@@ -80,28 +69,6 @@ Cell Spreadsheet::getOrCreate(const CellLocation &cellLocation)
     Cell newCell = Cell(CellLocation(cellLocation));
     spreadsheet[cellLocation] = newCell;
     return newCell;
-}
-
-bool Spreadsheet::initCycleSearch(const CellLocation &location)
-{
-    visited.clear();
-    return hasCycleFrom(location);
-}
-
-bool Spreadsheet::hasCycleFrom(const CellLocation &start)
-{
-    visited.insert(start);
-    set<CellLocation> nextCells;
-    findCellReferences(start, nextCells);
-    for (const CellLocation &cellLocation : nextCells)
-    {
-        if (visited.find(cellLocation) != visited.end())
-            return true;
-        if (hasCycleFrom(cellLocation))
-            return true;
-    }
-    visited.erase(start);
-    return false;
 }
 
 void Spreadsheet::deallocateCells()

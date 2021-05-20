@@ -40,7 +40,7 @@ double Cell::getValue() const
 void Cell::setExpression(Spreadsheet &spreadsheet, const string &input)
 {
     removeDependencies(spreadsheet);
-    expr.reset();
+    destroyCell();
     if (input.empty())
         expr = nullopt;
     else
@@ -88,5 +88,7 @@ Cell::~Cell()
 
 void Cell::destroyCell()
 {
+    if(expr.has_value())
+        delete expr.value();
     expr.reset();
 }
